@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CategorySection from "../components/CategorySection.astro";
+import { symbols } from "../symbols.json";
+
+interface Symbol {
+	title: string;
+	image: string;
+	category: string; 
+}
+
+const washing = symbols.filter((symbol) => { return symbol.category === "washing"});
+const bleaching = symbols.filter((symbol) => { return symbol.category === "bleaching"});
+const drying = symbols.filter((symbol) => { return symbol.category === "drying"});
+
+---
+
+<Layout title="Welcome to Astro.">
+	<main class="max-w-3xl m-auto bg-cyan-50 p-3">
+		<CategorySection 
+			symbols={washing}
+			title="Washing"
+			icon="https://upload.wikimedia.org/wikipedia/commons/f/f1/Waschen.svg"
+		/>
+		<CategorySection 
+			symbols={bleaching}
+			title="Bleaching"
+			icon="https://upload.wikimedia.org/wikipedia/commons/7/78/Bleichen.svg"
+		/>
+		<CategorySection 
+			symbols={drying}
+			title="Drying"
+			icon="https://upload.wikimedia.org/wikipedia/commons/6/61/Trocknen.svg"
+		/>
+	</main>
+</Layout>

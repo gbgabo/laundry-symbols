@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="bg-cyan-50">
+<html lang="en" class="scroll-smooth bg-cyan-50">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -15,6 +15,52 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
+	<header class="fixed flex w-full bottom-0 md:left-52 md:top-0 md:h-full md:w-fit">
+		<nav class="w-fit m-auto bg-cyan-100 p-3 rounded-t-xl md:rounded-full drop-shadow-lg">
+			<ul class="grid grid-cols-5 md:grid-rows-5 md:grid-cols-1 gap-4">
+				<li>
+					<a href="#washing">
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Waschen.svg"
+							class="w-12"
+						/>
+					</a>
+				</li>
+				<li>
+					<a href="#bleaching">
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/7/78/Bleichen.svg"
+							class="w-12"
+						/>
+					</a>
+				</li>
+				<li>
+					<a href="#drying">
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/6/61/Trocknen.svg"
+							class="w-12"
+						/>
+					</a>
+				</li>
+				<li>
+					<a href="#ironing">
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/9/92/B%C3%BCgeln.svg"
+							class="w-12"
+						/>
+					</a>
+				</li>
+				<li>
+					<a href="#professional">
+						<img
+							src="https://upload.wikimedia.org/wikipedia/commons/7/75/Professionelle_reinigung.svg"
+							class="w-12"
+						/>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
 	<body>
 		<slot />
 	</body>

@@ -12,11 +12,13 @@ interface Symbol {
 const washing = symbols.filter((symbol) => { return symbol.category === "washing"});
 const bleaching = symbols.filter((symbol) => { return symbol.category === "bleaching"});
 const drying = symbols.filter((symbol) => { return symbol.category === "drying"});
+const ironing = symbols.filter((symbol) => { return symbol.category === "ironing"});
+const professional = symbols.filter((symbol) => { return symbol.category === "professional"});
 
 ---
 
-<Layout title="Welcome to Astro.">
-	<main class="max-w-3xl m-auto bg-cyan-50 p-3">
+<Layout title="Laundry Symbols List">
+	<main class="max-w-3xl m-auto bg-cyan-50 p-3 mb-20">
 		<CategorySection 
 			symbols={washing}
 			title="Washing"
@@ -31,6 +33,16 @@ const drying = symbols.filter((symbol) => { return symbol.category === "drying"}
 			symbols={drying}
 			title="Drying"
 			icon="https://upload.wikimedia.org/wikipedia/commons/6/61/Trocknen.svg"
+		/>
+		<CategorySection 
+			symbols={ironing}
+			title="Ironing"
+			icon="https://upload.wikimedia.org/wikipedia/commons/9/92/B%C3%BCgeln.svg"
+		/>
+		<CategorySection 
+			symbols={professional}
+			title="Professional Cleaning"
+			icon="https://upload.wikimedia.org/wikipedia/commons/7/75/Professionelle_reinigung.svg"
 		/>
 	</main>
 </Layout>

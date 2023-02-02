@@ -8,8 +8,8 @@ const { title, image } = Astro.props;
 ---
 
 <li class="flex flex-col align-center bg-white rounded p-4 shadow-md">
-	<img class="p-3" src={image} />
-	<h2>
+	<img class="p-3" src={image} alt={title}/>
+	<h2 class="text-center">
 		{title}
 	</h2>
 </li>

@@ -1,22 +1,22 @@
 {
   "symbols": [
     {
-      "title": "Wash at or below 30 °C",
+      "title": "Wash at or below 30°C",
       "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Waschen_30.svg",
       "category": "washing"
     },
     {
-      "title": "Wash at or below 40 °C",
+      "title": "Wash at or below 40°C",
       "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Waschen_40.svg",
       "category": "washing"
     },
     {
-      "title": "Wash at or below 50 °C",
+      "title": "Wash at or below 50°C",
       "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Waschen_50.svg",
       "category": "washing"
     },
     {
-      "title": "Wash at or below 60 °C",
+      "title": "Wash at or below 60°C",
       "image": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Waschen_60.svg",
       "category": "washing"
     },

@@ -6,43 +6,73 @@ import { symbols } from "../symbols.json";
 interface Symbol {
 	title: string;
 	image: string;
-	category: string; 
+	category: string;
 }
 
-const washing = symbols.filter((symbol) => { return symbol.category === "washing"});
-const bleaching = symbols.filter((symbol) => { return symbol.category === "bleaching"});
-const drying = symbols.filter((symbol) => { return symbol.category === "drying"});
-const ironing = symbols.filter((symbol) => { return symbol.category === "ironing"});
-const professional = symbols.filter((symbol) => { return symbol.category === "professional"});
-
+const washing = symbols.filter((symbol) => {
+	return symbol.category === "washing";
+});
+const bleaching = symbols.filter((symbol) => {
+	return symbol.category === "bleaching";
+});
+const drying = symbols.filter((symbol) => {
+	return symbol.category === "drying";
+});
+const ironing = symbols.filter((symbol) => {
+	return symbol.category === "ironing";
+});
+const professional = symbols.filter((symbol) => {
+	return symbol.category === "professional";
+});
 ---
 
-<Layout title="Laundry Symbols List" description="List of the most common symbols found on clothing describing the way to wash them">
-	<main class="max-w-3xl m-auto bg-cyan-50 p-3 mb-20">
-		<CategorySection 
+<Layout
+	title="Laundry Symbols List"
+	description="List of the most common symbols found on clothing describing the way to wash them"
+>
+	<main class="m-auto mb-20 max-w-3xl bg-cyan-50 p-3">
+		<input type="text" name="query" id="search-query" />
+		<CategorySection
 			symbols={washing}
 			title="Washing"
 			icon="https://upload.wikimedia.org/wikipedia/commons/f/f1/Waschen.svg"
 		/>
-		<CategorySection 
+		<CategorySection
 			symbols={bleaching}
 			title="Bleaching"
 			icon="https://upload.wikimedia.org/wikipedia/commons/7/78/Bleichen.svg"
 		/>
-		<CategorySection 
+		<CategorySection
 			symbols={drying}
 			title="Drying"
 			icon="https://upload.wikimedia.org/wikipedia/commons/6/61/Trocknen.svg"
 		/>
-		<CategorySection 
+		<CategorySection
 			symbols={ironing}
 			title="Ironing"
 			icon="https://upload.wikimedia.org/wikipedia/commons/9/92/B%C3%BCgeln.svg"
 		/>
-		<CategorySection 
+		<CategorySection
 			symbols={professional}
 			title="Professional Cleaning"
 			icon="https://upload.wikimedia.org/wikipedia/commons/7/75/Professionelle_reinigung.svg"
 		/>
 	</main>
 </Layout>
+
+<script>
+	const searchInput = document.querySelector(
+		"#search-query"
+	) as HTMLInputElement;
+	const symbols = document.querySelectorAll("li>h2");
+
+	searchInput.addEventListener("input", (e) => {
+		const value = e.target.value.toLowerCase();
+		symbols.forEach((element, index) => {
+			const isVisible =
+				element.textContent.toLowerCase().includes(value) ||
+				element.textContent.toLowerCase().includes(value);
+			element.parentElement.classList.toggle("hidden", !isVisible);
+		});
+	});
+</script>

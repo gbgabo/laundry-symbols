@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import CategorySection from "../components/CategorySection.astro";
 import { symbols } from "../symbols.json";
+import SearchBar from "../components/SearchBar.astro";
 
 interface Symbol {
 	title: string;
@@ -30,8 +31,8 @@ const professional = symbols.filter((symbol) => {
 	title="Laundry Symbols List"
 	description="List of the most common symbols found on clothing describing the way to wash them"
 >
-	<main class="m-auto mb-20 max-w-3xl bg-cyan-50 p-3">
-		<input type="text" name="query" id="search-query" />
+	<SearchBar />
+	<main class="m-auto mb-20 mt-5 max-w-3xl bg-cyan-50 p-3">
 		<CategorySection
 			symbols={washing}
 			title="Washing"
@@ -59,20 +60,3 @@ const professional = symbols.filter((symbol) => {
 		/>
 	</main>
 </Layout>
-
-<script>
-	const searchInput = document.querySelector(
-		"#search-query"
-	) as HTMLInputElement;
-	const symbols = document.querySelectorAll("li>h2");
-
-	searchInput.addEventListener("input", (e) => {
-		const value = e.target.value.toLowerCase();
-		symbols.forEach((element, index) => {
-			const isVisible =
-				element.textContent.toLowerCase().includes(value) ||
-				element.textContent.toLowerCase().includes(value);
-			element.parentElement.classList.toggle("hidden", !isVisible);
-		});
-	});
-</script>

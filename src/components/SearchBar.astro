@@ -38,7 +38,7 @@
 
     searchInput.addEventListener("input", (e) => {
         const value = e.target.value.toLowerCase();
-        symbols.forEach((element, index) => {
+        symbols.forEach((element) => {
             const isVisible = element.textContent.toLowerCase().includes(value);
             element.parentElement.classList.toggle("hidden", !isVisible);
         });

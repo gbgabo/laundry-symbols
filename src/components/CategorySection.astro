@@ -16,18 +16,16 @@ export interface Props {
 const { title, icon, symbols } = Astro.props;
 ---
 
-<div id={symbols[0].category} class="my-6">
-	<div class="flex flex-row items-center pt-5 mb-3">
-		<img
-			src={icon}
-			class="w-12 mr-3"
-			alt={`${title} symbol`}
-		/>
+<div id={symbols[0].category}>
+	<div class="mb-3 flex flex-row items-center pt-16">
+		<img src={icon} class="mr-3 w-12" alt={`${title} symbol`} />
 		<h1 class="font-medium">{title}</h1>
 	</div>
-	<ul role="list" class="grid gap-4 md:grid-cols-3 grid-cols-2">
-		{symbols.map(({ title, image }) => {
-			return <Card title={title} image={image} />;
-		})}
+	<ul role="list" class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+		{
+			symbols.map(({ title, image }) => {
+				return <Card title={title} image={image} />;
+			})
+		}
 	</ul>
 </div>

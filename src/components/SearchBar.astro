@@ -31,16 +31,15 @@
 </div>
 
 <script>
-    const searchInput = document.querySelector(
-        "#search-query"
-    ) as HTMLInputElement;
-    const symbols = document.querySelectorAll("li>h2");
+    const searchInput = document.querySelector("#search-query") as HTMLInputElement;
+    const symbols = document.querySelectorAll("li>h2") as NodeListOf<HTMLHeadingElement>;
 
-    searchInput.addEventListener("input", (e) => {
-        const value = e.target.value.toLowerCase();
+    searchInput.addEventListener("input", (event) => {
+        const target = event.target as HTMLInputElement;
+        const value = target.value.toLowerCase();
         symbols.forEach((element) => {
-            const isVisible = element.textContent.toLowerCase().includes(value);
-            element.parentElement.classList.toggle("hidden", !isVisible);
+            const isVisible = element.textContent!.toLowerCase().includes(value);
+            element.parentElement!.classList.toggle("hidden", !isVisible);
         });
     });
 </script>

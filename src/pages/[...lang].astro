@@ -1,14 +1,36 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CategorySection from "../components/CategorySection.astro";
-import { symbols } from "../symbols.json";
 import SearchBar from "../components/SearchBar.astro";
+
+import { symbolsByLang } from "../symbols.json";
 
 interface Symbol {
 	title: string;
 	image: string;
 	category: string;
 }
+
+export async function getStaticPaths() {
+
+	const paths = [
+		{ 
+			lang: undefined,
+			symbols: symbolsByLang[0].symbols
+		},
+		...symbolsByLang
+	]
+	
+	return paths.map((path) => { 
+		const { lang, symbols } = path;
+		return { 
+			params: { lang: lang }, 
+			props: { symbols },
+		}
+	})
+}
+
+const { symbols } = Astro.props;
 
 const washing = symbols.filter((symbol) => {
 	return symbol.category === "washing";

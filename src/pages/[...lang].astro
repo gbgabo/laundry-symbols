@@ -1,14 +1,41 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CategorySection from "../components/CategorySection.astro";
-import { symbols } from "../symbols.json";
 import SearchBar from "../components/SearchBar.astro";
+
+import { symbolsByLang } from "../symbols.json";
 
 interface Symbol {
 	title: string;
 	image: string;
 	category: string;
 }
+
+interface Props {
+	symbols: Symbol[]; 
+}
+
+export async function getStaticPaths() {
+
+	const paths = [
+		{ 
+			lang: undefined,
+			symbols: symbolsByLang[0].symbols
+		},
+		...symbolsByLang
+	]
+	
+	return paths.map((path) => { 
+		const { lang, symbols } = path;
+		return { 
+			params: { lang: lang }, 
+			props: { symbols },
+		}
+	})
+}
+
+const { lang = "en" } =  Astro.params;
+const { symbols } = Astro.props;
 
 const washing = symbols.filter((symbol) => {
 	return symbol.category === "washing";
@@ -31,7 +58,17 @@ const professional = symbols.filter((symbol) => {
 	title="Laundry Symbols List"
 	description="List of the most common symbols found on clothing describing the way to wash them"
 >
-	<SearchBar />
+	<SearchBar 
+		current={lang}
+		languages={[{ 
+			slug: "en", 
+			emoji: "🇺🇸"
+		},{ 
+			slug: "pt-br", 
+			emoji: "🇧🇷"
+		}]
+		}
+	/>
 	<main class="m-auto mb-20 max-w-3xl bg-cyan-50 p-3">
 		<CategorySection
 			symbols={washing}

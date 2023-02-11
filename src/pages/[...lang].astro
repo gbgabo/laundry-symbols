@@ -11,6 +11,10 @@ interface Symbol {
 	category: string;
 }
 
+interface Props {
+	symbols: Symbol[]; 
+}
+
 export async function getStaticPaths() {
 
 	const paths = [

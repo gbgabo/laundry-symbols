@@ -30,6 +30,7 @@ export async function getStaticPaths() {
 	})
 }
 
+const { lang = "en" } =  Astro.params;
 const { symbols } = Astro.props;
 
 const washing = symbols.filter((symbol) => {
@@ -53,7 +54,17 @@ const professional = symbols.filter((symbol) => {
 	title="Laundry Symbols List"
 	description="List of the most common symbols found on clothing describing the way to wash them"
 >
-	<SearchBar />
+	<SearchBar 
+		current={lang}
+		languages={[{ 
+			slug: "en", 
+			emoji: "🇺🇸"
+		},{ 
+			slug: "pt-br", 
+			emoji: "🇧🇷"
+		}]
+		}
+	/>
 	<main class="m-auto mb-20 max-w-3xl bg-cyan-50 p-3">
 		<CategorySection
 			symbols={washing}

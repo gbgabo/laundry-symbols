@@ -2,6 +2,7 @@
   "symbolsByLang": [
     {
       "lang": "en",
+      "emoji": "🇺🇸",
       "symbols": [
         {
           "title": "Wash at or below 30°C",
@@ -193,6 +194,7 @@
     },
     {
       "lang": "pt-br",
+      "emoji": "🇧🇷",
       "symbols": [
         {
           "title": "Lavar até ou menos de 30°C",

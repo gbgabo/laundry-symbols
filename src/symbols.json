@@ -74,7 +74,6 @@
           "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Nicht_trommeltrocknen.svg",
           "category": "drying"
         },
-
         {
           "title": "Line drying",
           "image": "https://upload.wikimedia.org/wikipedia/commons/4/40/Trocknen_%28leine%29.svg",
@@ -111,7 +110,6 @@
           "image": "https://upload.wikimedia.org/wikipedia/commons/1/17/Trocknen_%28tropfnass_im_schatten%29.svg",
           "category": "drying"
         },
-
         {
           "title": "Iron at low temperature",
           "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/B%C3%BCgeln_1.svg",
@@ -132,7 +130,6 @@
           "image": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Nicht_b%C3%BCgeln.svg",
           "category": "ironing"
         },
-
         {
           "title": "Dry clean, hydrocarbon solvent only (HCS)",
           "image": "https://upload.wikimedia.org/wikipedia/commons/3/37/Professionelle_reinigung_%28F%29.svg",
@@ -153,7 +150,6 @@
           "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Professionelle_reinigung_%28P%29.svg",
           "category": "professional"
         },
-
         {
           "title": "Gentle cleaning with PCE",
           "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Professionelle_reinigung_%28P%29s.svg",
@@ -169,7 +165,6 @@
           "image": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Nicht_chemisch_reinigen.svg",
           "category": "professional"
         },
-
         {
           "title": "Professional wet cleaning",
           "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Professionelle_reinigung_%28W%29.svg",
@@ -197,188 +192,182 @@
       "emoji": "🇧🇷",
       "symbols": [
         {
-          "title": "Lavar até ou menos de 30°C",
+          "title": "Lavar à temperatura de 30°C ou abaixo",
           "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Waschen_30.svg",
           "category": "washing"
         },
         {
-          "title": "Lavar até ou menos de 40°C",
+          "title": "Lavar à temperatura de 40°C ou abaixo",
           "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Waschen_40.svg",
           "category": "washing"
         },
         {
-          "title": "Lavar até ou menos de 50°C",
+          "title": "Lavar à temperatura de 50°C ou abaixo",
           "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Waschen_50.svg",
           "category": "washing"
         },
         {
-          "title": "Wash at or below 60°C",
+          "title": "Lavar à temperatura de 60°C ou abaixo",
           "image": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Waschen_60.svg",
           "category": "washing"
         },
         {
-          "title": "Hand wash",
+          "title": "Lavar à mão",
           "image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Handw%C3%A4sche.svg",
           "category": "washing"
         },
         {
-          "title": "Do not wash",
+          "title": "Não lavar",
           "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Nicht_waschen.svg",
           "category": "washing"
         },
         {
-          "title": "Bleaching with chlorine allowed (obsolete)",
+          "title": "Alvejamento com cloro permitido (obsoleto)",
           "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Bleichen_mit_chlor.svg",
           "category": "bleaching"
         },
         {
-          "title": "Non-chlorine bleach when needed",
+          "title": "Alvejamento sem cloro quando necessário",
           "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Sauerstoffbleichen.svg",
           "category": "bleaching"
         },
         {
-          "title": "Do not bleach",
+          "title": "Não alvejar",
           "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Nicht_bleichen_v2.svg",
           "category": "bleaching"
         },
         {
-          "title": "Do not bleach",
+          "title": "Não alvejar",
           "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Nicht_bleichen.svg",
           "category": "bleaching"
         },
         {
-          "title": "Tumble drying",
+          "title": "Secar na secadora",
           "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Trommeltrocknen.svg",
           "category": "drying"
         },
         {
-          "title": "Tumble drying (low temperature)",
+          "title": "Secagem em tambor (temperatura baixa)",
           "image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Trommeltrocknen_1.svg",
           "category": "drying"
         },
         {
-          "title": "Tumble drying (high temperature)",
+          "title": "Secagem em tambor (temperatura alta)",
           "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Trommeltrocknen_2.svg",
           "category": "drying"
         },
         {
-          "title": "Do not tumble dry",
+          "title": "Não secar em tambor",
           "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Nicht_trommeltrocknen.svg",
           "category": "drying"
         },
-
         {
-          "title": "Line drying",
+          "title": "Secagem ao ar livre",
           "image": "https://upload.wikimedia.org/wikipedia/commons/4/40/Trocknen_%28leine%29.svg",
           "category": "drying"
         },
         {
-          "title": "Dry flat",
+          "title": "Secagem plana",
           "image": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Trocknen_%28liegend%29.svg",
           "category": "drying"
         },
         {
-          "title": "Drip dry",
+          "title": "Secagem por gotejamento",
           "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Trocknen_%28tropfnass%29.svg",
           "category": "drying"
         },
-
         {
-          "title": "Dry in the shade",
+          "title": "Secagem à sombra",
           "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Trocknen_%28schatten%29.svg",
           "category": "drying"
         },
         {
-          "title": "Line dry in the shade",
+          "title": "Secagem ao ar livre à sombra",
           "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Trocknen_%28leine_im_schatten%29.svg",
           "category": "drying"
         },
         {
-          "title": "Dry flat in shade",
+          "title": "Secagem plana à sombra",
           "image": "https://upload.wikimedia.org/wikipedia/commons/6/68/Trocknen_%28liegend_im_schatten%29.svg",
           "category": "drying"
         },
         {
-          "title": "Drip dry in shade",
+          "title": "Secagem por gotejamento à sombra",
           "image": "https://upload.wikimedia.org/wikipedia/commons/1/17/Trocknen_%28tropfnass_im_schatten%29.svg",
           "category": "drying"
         },
-
         {
-          "title": "Iron at low temperature",
+          "title": "Ferro a baixa temperatura",
           "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/B%C3%BCgeln_1.svg",
           "category": "ironing"
         },
         {
-          "title": "Iron at medium temperature",
+          "title": "Ferro a temperatura média",
           "image": "https://upload.wikimedia.org/wikipedia/commons/b/b7/B%C3%BCgeln_2.svg",
           "category": "ironing"
         },
         {
-          "title": "Iron at high temperature",
+          "title": "Ferro a alta temperatura",
           "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/B%C3%BCgeln_3.svg",
           "category": "ironing"
         },
         {
-          "title": "Do not iron",
+          "title": "Não passar a ferro",
           "image": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Nicht_b%C3%BCgeln.svg",
           "category": "ironing"
         },
-
         {
-          "title": "Dry clean, hydrocarbon solvent only (HCS)",
+          "title": "Limpeza a seco, apenas com solvente hidrocarboneto (HCS)",
           "image": "https://upload.wikimedia.org/wikipedia/commons/3/37/Professionelle_reinigung_%28F%29.svg",
           "category": "professional"
         },
         {
-          "title": "Gentle cleaning with hydrocarbon solvents",
+          "title": "Limpeza suave com solventes hidrocarbonetos",
           "image": "https://upload.wikimedia.org/wikipedia/commons/8/88/Professionelle_reinigung_%28F%29s.svg",
           "category": "professional"
         },
         {
-          "title": "Very gentle cleaning with hydrocarbon solvents",
+          "title": "Limpeza muito suave com solventes hidrocarbonetos",
           "image": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Professionelle_reinigung_%28F%29ss.svg",
           "category": "professional"
         },
         {
-          "title": "Dry clean, tetrachloroethylene (PCE) only",
+          "title": "Limpeza a seco, apenas com tetrachloroetileno (PCE)",
           "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Professionelle_reinigung_%28P%29.svg",
           "category": "professional"
         },
-
         {
-          "title": "Gentle cleaning with PCE",
+          "title": "Limpeza suave com PCE",
           "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Professionelle_reinigung_%28P%29s.svg",
           "category": "professional"
         },
         {
-          "title": "Very gentle cleaning with PCE",
+          "title": "Limpeza muito suave com PCE",
           "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Professionelle_reinigung_%28P%29ss.svg",
           "category": "professional"
         },
         {
-          "title": "Do not chemical clean",
+          "title": "Não limpe quimicamente",
           "image": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Nicht_chemisch_reinigen.svg",
           "category": "professional"
         },
-
         {
-          "title": "Professional wet cleaning",
+          "title": "Limpeza a umido profissional",
           "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Professionelle_reinigung_%28W%29.svg",
           "category": "professional"
         },
         {
-          "title": "Gentle wet cleaning",
+          "title": "Limpeza a umido suave",
           "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Professionelle_reinigung_%28W%29s.svg",
           "category": "professional"
         },
         {
-          "title": "Very gentle wet cleaning",
+          "title": "Limpeza a umido muito suave",
           "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Professionelle_reinigung_%28W%29ss.svg",
           "category": "professional"
         },
         {
-          "title": "Do not wet clean",
+          "title": "Não limpe a umido",
           "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Nicht_nassreinigen.svg",
           "category": "professional"
         }

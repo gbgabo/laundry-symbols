@@ -6,33 +6,38 @@
       "symbols": [
         {
           "title": "Wash at or below 30°C",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Waschen_30.svg",
+          "image": "/img/symbols/washing/wash_30.svg",
           "category": "washing"
         },
         {
           "title": "Wash at or below 40°C",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Waschen_40.svg",
+          "image": "/img/symbols/washing/wash_40.svg",
           "category": "washing"
         },
         {
           "title": "Wash at or below 50°C",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Waschen_50.svg",
+          "image": "/img/symbols/washing/wash_50.svg",
           "category": "washing"
         },
         {
           "title": "Wash at or below 60°C",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Waschen_60.svg",
+          "image": "/img/symbols/washing/wash_60.svg",
           "category": "washing"
         },
         {
           "title": "Hand wash",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Handw%C3%A4sche.svg",
+          "image": "/img/symbols/washing/wash_hand.svg",
           "category": "washing"
         },
         {
           "title": "Do not wash",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Nicht_waschen.svg",
+          "image": "/img/symbols/washing/wash_not.svg",
           "category": "washing"
+        },
+        {
+          "title": "Allowed both chlorine and non-chlorine bleach",
+          "image": "/img/symbols/bleaching/bleach.svg",
+          "category": "bleaching"
         },
         {
           "title": "Bleaching with chlorine allowed (obsolete)",
@@ -193,41 +198,46 @@
       "symbols": [
         {
           "title": "Lavar à temperatura de 30°C ou abaixo",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Waschen_30.svg",
+          "image": "/img/symbols/washing/wash_30.svg",
           "category": "washing"
         },
         {
           "title": "Lavar à temperatura de 40°C ou abaixo",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Waschen_40.svg",
+          "image": "/img/symbols/washing/wash_40.svg",
           "category": "washing"
         },
         {
           "title": "Lavar à temperatura de 50°C ou abaixo",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/6/62/Waschen_50.svg",
+          "image": "/img/symbols/washing/wash_50.svg",
           "category": "washing"
         },
         {
           "title": "Lavar à temperatura de 60°C ou abaixo",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Waschen_60.svg",
+          "image": "/img/symbols/washing/wash_60.svg",
           "category": "washing"
         },
         {
           "title": "Lavar à mão",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Handw%C3%A4sche.svg",
+          "image": "/img/symbols/washing/wash_hand.svg",
           "category": "washing"
         },
         {
           "title": "Não lavar",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Nicht_waschen.svg",
+          "image": "/img/symbols/washing/wash_not.svg",
           "category": "washing"
         },
         {
-          "title": "Alvejamento com cloro permitido (obsoleto)",
+          "title": "Alvejante com e sem cloro permitido",
+          "image": "/img/symbols/bleaching/bleach.svg",
+          "category": "bleaching"
+        },
+        {
+          "title": "Alvejante com cloro permitido (obsoleto)",
           "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Bleichen_mit_chlor.svg",
           "category": "bleaching"
         },
         {
-          "title": "Alvejamento sem cloro quando necessário",
+          "title": "Alvejante sem cloro quando necessário",
           "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Sauerstoffbleichen.svg",
           "category": "bleaching"
         },

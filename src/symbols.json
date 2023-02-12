@@ -61,58 +61,57 @@
         },
         {
           "title": "Tumble drying",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Trommeltrocknen.svg",
+          "image": "/img/symbols/drying/dry_tumble.svg",
           "category": "drying"
         },
         {
           "title": "Tumble drying (low temperature)",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Trommeltrocknen_1.svg",
+          "image": "/img/symbols/drying/dry_tumble_low.svg",
           "category": "drying"
         },
         {
           "title": "Tumble drying (high temperature)",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Trommeltrocknen_2.svg",
+          "image": "/img/symbols/drying/dry_tumble_high.svg",
           "category": "drying"
         },
         {
           "title": "Do not tumble dry",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Nicht_trommeltrocknen.svg",
+          "image": "/img/symbols/drying/dry_not_tumble.svg",
           "category": "drying"
         },
         {
           "title": "Line drying",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/4/40/Trocknen_%28leine%29.svg",
+          "image": "/img/symbols/drying/dry_line.svg",
           "category": "drying"
         },
         {
           "title": "Dry flat",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Trocknen_%28liegend%29.svg",
+          "image": "/img/symbols/drying/dry_flat.svg",
           "category": "drying"
         },
         {
           "title": "Drip dry",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Trocknen_%28tropfnass%29.svg",
+          "image": "/img/symbols/drying/dry_drip.svg",
           "category": "drying"
         },
-
         {
           "title": "Dry in the shade",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Trocknen_%28schatten%29.svg",
+          "image": "/img/symbols/drying/dry_shade.svg",
           "category": "drying"
         },
         {
           "title": "Line dry in the shade",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Trocknen_%28leine_im_schatten%29.svg",
+          "image": "/img/symbols/drying/dry_line_shade.svg",
           "category": "drying"
         },
         {
           "title": "Dry flat in shade",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/6/68/Trocknen_%28liegend_im_schatten%29.svg",
+          "image": "/img/symbols/drying/dry_flat_shade.svg",
           "category": "drying"
         },
         {
           "title": "Drip dry in shade",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/1/17/Trocknen_%28tropfnass_im_schatten%29.svg",
+          "image": "/img/symbols/drying/dry_drip_shade.svg",
           "category": "drying"
         },
         {
@@ -253,57 +252,57 @@
         },
         {
           "title": "Secar na secadora",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Trommeltrocknen.svg",
+          "image": "/img/symbols/drying/dry_tumble.svg",
           "category": "drying"
         },
         {
           "title": "Secagem em tambor (temperatura baixa)",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Trommeltrocknen_1.svg",
+          "image": "/img/symbols/drying/dry_tumble_low.svg",
           "category": "drying"
         },
         {
           "title": "Secagem em tambor (temperatura alta)",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Trommeltrocknen_2.svg",
+          "image": "/img/symbols/drying/dry_tumble_high.svg",
           "category": "drying"
         },
         {
           "title": "Não secar em tambor",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Nicht_trommeltrocknen.svg",
+          "image": "/img/symbols/drying/dry_not_tumble.svg",
           "category": "drying"
         },
         {
           "title": "Secagem ao ar livre",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/4/40/Trocknen_%28leine%29.svg",
+          "image": "/img/symbols/drying/dry_line.svg",
           "category": "drying"
         },
         {
           "title": "Secagem plana",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Trocknen_%28liegend%29.svg",
+          "image": "/img/symbols/drying/dry_flat.svg",
           "category": "drying"
         },
         {
           "title": "Secagem por gotejamento",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/3/31/Trocknen_%28tropfnass%29.svg",
+          "image": "/img/symbols/drying/dry_drip.svg",
           "category": "drying"
         },
         {
           "title": "Secagem à sombra",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Trocknen_%28schatten%29.svg",
+          "image": "/img/symbols/drying/dry_shade.svg",
           "category": "drying"
         },
         {
           "title": "Secagem ao ar livre à sombra",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Trocknen_%28leine_im_schatten%29.svg",
+          "image": "/img/symbols/drying/dry_line_shade.svg",
           "category": "drying"
         },
         {
           "title": "Secagem plana à sombra",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/6/68/Trocknen_%28liegend_im_schatten%29.svg",
+          "image": "/img/symbols/drying/dry_flat_shade.svg",
           "category": "drying"
         },
         {
           "title": "Secagem por gotejamento à sombra",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/1/17/Trocknen_%28tropfnass_im_schatten%29.svg",
+          "image": "/img/symbols/drying/dry_drip_shade.svg",
           "category": "drying"
         },
         {

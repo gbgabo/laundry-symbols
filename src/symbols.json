@@ -116,77 +116,77 @@
         },
         {
           "title": "Iron at low temperature",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/B%C3%BCgeln_1.svg",
+          "image": "/img/symbols/ironing/iron_low.svg",
           "category": "ironing"
         },
         {
           "title": "Iron at medium temperature",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/b/b7/B%C3%BCgeln_2.svg",
+          "image": "/img/symbols/ironing/iron_medium.svg",
           "category": "ironing"
         },
         {
           "title": "Iron at high temperature",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/B%C3%BCgeln_3.svg",
+          "image": "/img/symbols/ironing/iron_high.svg",
           "category": "ironing"
         },
         {
           "title": "Do not iron",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Nicht_b%C3%BCgeln.svg",
+          "image": "/img/symbols/ironing/iron_not.svg",
           "category": "ironing"
         },
         {
           "title": "Dry clean, hydrocarbon solvent only (HCS)",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/3/37/Professionelle_reinigung_%28F%29.svg",
+          "image": "/img/symbols/professional/pro_hcs.svg",
           "category": "professional"
         },
         {
           "title": "Gentle cleaning with hydrocarbon solvents",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/8/88/Professionelle_reinigung_%28F%29s.svg",
+          "image": "/img/symbols/professional/pro_hcs_gentle.svg",
           "category": "professional"
         },
         {
           "title": "Very gentle cleaning with hydrocarbon solvents",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Professionelle_reinigung_%28F%29ss.svg",
+          "image": "/img/symbols/professional/pro_hcs_very_gentle.svg",
           "category": "professional"
         },
         {
           "title": "Dry clean, tetrachloroethylene (PCE) only",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Professionelle_reinigung_%28P%29.svg",
+          "image": "/img/symbols/professional/pro_pce.svg",
           "category": "professional"
         },
         {
           "title": "Gentle cleaning with PCE",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Professionelle_reinigung_%28P%29s.svg",
+          "image": "/img/symbols/professional/pro_pce_gentle.svg",
           "category": "professional"
         },
         {
           "title": "Very gentle cleaning with PCE",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Professionelle_reinigung_%28P%29ss.svg",
+          "image": "/img/symbols/professional/pro_pce_very_gentle.svg",
           "category": "professional"
         },
         {
           "title": "Do not chemical clean",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Nicht_chemisch_reinigen.svg",
+          "image": "/img/symbols/professional/pro_not_chem.svg",
           "category": "professional"
         },
         {
           "title": "Professional wet cleaning",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Professionelle_reinigung_%28W%29.svg",
+          "image": "/img/symbols/professional/pro_wet.svg",
           "category": "professional"
         },
         {
           "title": "Gentle wet cleaning",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Professionelle_reinigung_%28W%29s.svg",
+          "image": "/img/symbols/professional/pro_wet_gentle.svg",
           "category": "professional"
         },
         {
           "title": "Very gentle wet cleaning",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Professionelle_reinigung_%28W%29ss.svg",
+          "image": "/img/symbols/professional/pro_wet_very_gentle.svg",
           "category": "professional"
         },
         {
           "title": "Do not wet clean",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Nicht_nassreinigen.svg",
+          "image": "/img/symbols/professional/pro_not_wet.svg",
           "category": "professional"
         }
       ]
@@ -307,77 +307,77 @@
         },
         {
           "title": "Ferro a baixa temperatura",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/B%C3%BCgeln_1.svg",
+          "image": "/img/symbols/ironing/iron_low.svg",
           "category": "ironing"
         },
         {
           "title": "Ferro a temperatura média",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/b/b7/B%C3%BCgeln_2.svg",
+          "image": "/img/symbols/ironing/iron_medium.svg",
           "category": "ironing"
         },
         {
           "title": "Ferro a alta temperatura",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/B%C3%BCgeln_3.svg",
+          "image": "/img/symbols/ironing/iron_high.svg",
           "category": "ironing"
         },
         {
           "title": "Não passar a ferro",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Nicht_b%C3%BCgeln.svg",
+          "image": "/img/symbols/ironing/iron_not.svg",
           "category": "ironing"
         },
         {
           "title": "Limpeza a seco, apenas com solvente hidrocarboneto (HCS)",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/3/37/Professionelle_reinigung_%28F%29.svg",
+          "image": "/img/symbols/professional/pro_hcs.svg",
           "category": "professional"
         },
         {
           "title": "Limpeza suave com solventes hidrocarbonetos",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/8/88/Professionelle_reinigung_%28F%29s.svg",
+          "image": "/img/symbols/professional/pro_hcs_gentle.svg",
           "category": "professional"
         },
         {
           "title": "Limpeza muito suave com solventes hidrocarbonetos",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Professionelle_reinigung_%28F%29ss.svg",
+          "image": "/img/symbols/professional/pro_hcs_very_gentle.svg",
           "category": "professional"
         },
         {
           "title": "Limpeza a seco, apenas com tetrachloroetileno (PCE)",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Professionelle_reinigung_%28P%29.svg",
+          "image": "/img/symbols/professional/pro_pce.svg",
           "category": "professional"
         },
         {
           "title": "Limpeza suave com PCE",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Professionelle_reinigung_%28P%29s.svg",
+          "image": "/img/symbols/professional/pro_pce_gentle.svg",
           "category": "professional"
         },
         {
           "title": "Limpeza muito suave com PCE",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Professionelle_reinigung_%28P%29ss.svg",
+          "image": "/img/symbols/professional/pro_pce_very_gentle.svg",
           "category": "professional"
         },
         {
           "title": "Não limpe quimicamente",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Nicht_chemisch_reinigen.svg",
+          "image": "/img/symbols/professional/pro_not_chem.svg",
           "category": "professional"
         },
         {
           "title": "Limpeza a umido profissional",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Professionelle_reinigung_%28W%29.svg",
+          "image": "/img/symbols/professional/pro_wet.svg",
           "category": "professional"
         },
         {
           "title": "Limpeza a umido suave",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Professionelle_reinigung_%28W%29s.svg",
+          "image": "/img/symbols/professional/pro_wet_gentle.svg",
           "category": "professional"
         },
         {
           "title": "Limpeza a umido muito suave",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Professionelle_reinigung_%28W%29ss.svg",
+          "image": "/img/symbols/professional/pro_wet_very_gentle.svg",
           "category": "professional"
         },
         {
           "title": "Não limpe a umido",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Nicht_nassreinigen.svg",
+          "image": "/img/symbols/professional/pro_not_wet.svg",
           "category": "professional"
         }
       ]

@@ -41,22 +41,22 @@
         },
         {
           "title": "Bleaching with chlorine allowed (obsolete)",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Bleichen_mit_chlor.svg",
+          "image": "/img/symbols/bleaching/bleach_chlor.svg",
           "category": "bleaching"
         },
         {
           "title": "Non-chlorine bleach when needed",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Sauerstoffbleichen.svg",
+          "image": "/img/symbols/bleaching/bleach_not_chlor.svg",
           "category": "bleaching"
         },
         {
           "title": "Do not bleach",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Nicht_bleichen_v2.svg",
+          "image": "/img/symbols/bleaching/bleach_not.svg",
           "category": "bleaching"
         },
         {
           "title": "Do not bleach",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Nicht_bleichen.svg",
+          "image": "/img/symbols/bleaching/bleach_not_2.svg",
           "category": "bleaching"
         },
         {
@@ -233,22 +233,22 @@
         },
         {
           "title": "Alvejante com cloro permitido (obsoleto)",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Bleichen_mit_chlor.svg",
+          "image": "/img/symbols/bleaching/bleach_chlor.svg",
           "category": "bleaching"
         },
         {
           "title": "Alvejante sem cloro quando necessário",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Sauerstoffbleichen.svg",
+          "image": "/img/symbols/bleaching/bleach_not_chlor.svg",
           "category": "bleaching"
         },
         {
           "title": "Não alvejar",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Nicht_bleichen_v2.svg",
+          "image": "/img/symbols/bleaching/bleach_not.svg",
           "category": "bleaching"
         },
         {
           "title": "Não alvejar",
-          "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Nicht_bleichen.svg",
+          "image": "/img/symbols/bleaching/bleach_not_2.svg",
           "category": "bleaching"
         },
         {

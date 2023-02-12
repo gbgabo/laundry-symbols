@@ -12,29 +12,28 @@ interface Symbol {
 }
 
 interface Props {
-	symbols: Symbol[]; 
+	symbols: Symbol[];
 }
 
 export async function getStaticPaths() {
-
 	const paths = [
-		{ 
+		{
 			lang: undefined,
-			symbols: symbolsByLang[0].symbols
+			symbols: symbolsByLang[0].symbols,
 		},
-		...symbolsByLang
-	]
-	
-	return paths.map((path) => { 
+		...symbolsByLang,
+	];
+
+	return paths.map((path) => {
 		const { lang, symbols } = path;
-		return { 
-			params: { lang: lang }, 
+		return {
+			params: { lang: lang },
 			props: { symbols },
-		}
-	})
+		};
+	});
 }
 
-const { lang = "en" } =  Astro.params;
+const { lang = "en" } = Astro.params;
 const { symbols } = Astro.props;
 
 const washing = symbols.filter((symbol) => {
@@ -58,42 +57,44 @@ const professional = symbols.filter((symbol) => {
 	title="Laundry Symbols List"
 	description="List of the most common symbols found on clothing describing the way to wash them"
 >
-	<SearchBar 
+	<SearchBar
 		current={lang}
-		languages={[{ 
-			slug: "en", 
-			emoji: "🇺🇸"
-		},{ 
-			slug: "pt-br", 
-			emoji: "🇧🇷"
-		}]
-		}
+		languages={[
+			{
+				slug: "en",
+				emoji: "🇺🇸",
+			},
+			{
+				slug: "pt-br",
+				emoji: "🇧🇷",
+			},
+		]}
 	/>
 	<main class="m-auto mb-20 max-w-3xl bg-cyan-50 p-3">
 		<CategorySection
 			symbols={washing}
 			title="Washing"
-			icon="https://upload.wikimedia.org/wikipedia/commons/f/f1/Waschen.svg"
+			icon="/img/symbols/washing/wash.svg"
 		/>
 		<CategorySection
 			symbols={bleaching}
 			title="Bleaching"
-			icon="https://upload.wikimedia.org/wikipedia/commons/7/78/Bleichen.svg"
+			icon="/img/symbols/bleaching/bleach.svg"
 		/>
 		<CategorySection
 			symbols={drying}
 			title="Drying"
-			icon="https://upload.wikimedia.org/wikipedia/commons/6/61/Trocknen.svg"
+			icon="/img/symbols/drying/dry.svg"
 		/>
 		<CategorySection
 			symbols={ironing}
 			title="Ironing"
-			icon="https://upload.wikimedia.org/wikipedia/commons/9/92/B%C3%BCgeln.svg"
+			icon="/img/symbols/ironing/iron.svg"
 		/>
 		<CategorySection
 			symbols={professional}
 			title="Professional Cleaning"
-			icon="https://upload.wikimedia.org/wikipedia/commons/7/75/Professionelle_reinigung.svg"
+			icon="/img/symbols/professional/professional.svg"
 		/>
 	</main>
 </Layout>

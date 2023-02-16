@@ -8,7 +8,7 @@ export interface Props {
     }[];
 }
 
-const { current, languages, prompt = "search" } = Astro.props;
+const { current, languages, prompt = "Search" } = Astro.props;
 
 const index = languages.findIndex((lang) => lang.slug === current);
 const [currentLanguage] = languages.splice(index, 1);
@@ -99,7 +99,7 @@ const [currentLanguage] = languages.splice(index, 1);
         "#search-query"
     ) as HTMLInputElement;
     const symbols = document.querySelectorAll(
-        "li>h2"
+        ".symbol-title"
     ) as NodeListOf<HTMLHeadingElement>;
 
     searchInput.addEventListener("input", (event) => {

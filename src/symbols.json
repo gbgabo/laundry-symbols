@@ -3,6 +3,30 @@
     {
       "lang": "en",
       "emoji": "🇺🇸",
+      "title": "Laundry Symbols List",
+      "description": "List of the most common symbols found on clothing describing the way to wash them",
+      "categories": {
+        "washing": {
+            "name": "Washing",
+            "imageUrl": "/img/symbols/washing/wash.svg"
+          },
+          "bleaching": {
+            "name": "Bleaching",
+            "imageUrl": "/img/symbols/bleaching/bleach.svg"
+          },
+          "drying": {
+            "name": "Drying",
+            "imageUrl": "/img/symbols/drying/dry.svg"
+          },
+          "ironing": {
+            "name": "Ironing",
+            "imageUrl": "/img/symbols/ironing/iron.svg"
+          },
+          "professional": {
+            "name": "Professional",
+            "imageUrl": "/img/symbols/professional/professional.svg"
+          }
+      },
       "symbols": [
         {
           "title": "Wash at or below 30°C",
@@ -194,6 +218,31 @@
     {
       "lang": "pt-br",
       "emoji": "🇧🇷",
+      "title": "Laundry Symbols List",
+      "description": "List of the most common symbols found on clothing describing the way to wash them",
+      "searchPrompt": "Pesquisar",
+      "categories": {
+        "washing": {
+            "name": "Lavagem",
+            "imageUrl": "/img/symbols/washing/wash.svg"
+          },
+          "bleaching": {
+            "name": "Alvejante",
+            "imageUrl": "/img/symbols/bleaching/bleach.svg"
+          },
+          "drying": {
+            "name": "Secagem",
+            "imageUrl": "/img/symbols/drying/dry.svg"
+          },
+          "ironing": {
+            "name": "Ferro",
+            "imageUrl": "/img/symbols/ironing/iron.svg"
+          },
+          "professional": {
+            "name": "Profissional",
+            "imageUrl": "/img/symbols/professional/professional.svg"
+          }
+      },
       "symbols": [
         {
           "title": "Lavar à temperatura de 30°C ou abaixo",

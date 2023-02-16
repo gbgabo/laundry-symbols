@@ -18,47 +18,45 @@ interface Props {
 export async function getStaticPaths() {
 	const paths = [
 		{
+			...symbolsByLang[0],
 			lang: undefined,
-			symbols: symbolsByLang[0].symbols,
 		},
 		...symbolsByLang,
 	];
 
 	return paths.map((path) => {
-		const { lang, symbols } = path;
+		const { lang } = path;
 		return {
 			params: { lang: lang },
-			props: { symbols },
+			props: { ...path },
 		};
 	});
 }
 
 const { lang = "en" } = Astro.params;
-const { symbols } = Astro.props;
+const { symbols, categories, title, description, searchPrompt } = Astro.props;
 
-const washing = symbols.filter((symbol) => {
-	return symbol.category === "washing";
-});
-const bleaching = symbols.filter((symbol) => {
-	return symbol.category === "bleaching";
-});
-const drying = symbols.filter((symbol) => {
-	return symbol.category === "drying";
-});
-const ironing = symbols.filter((symbol) => {
-	return symbol.category === "ironing";
-});
-const professional = symbols.filter((symbol) => {
-	return symbol.category === "professional";
-});
+interface SymbolObjectByAttribute {
+	[key: string]: Symbol[];
+}
+
+const symbolsByCategory: SymbolObjectByAttribute = symbols.reduce(
+	(symbolsObject: SymbolObjectByAttribute, symbol) => {
+		if (symbolsObject[symbol.category]) {
+			symbolsObject[symbol.category].push(symbol);
+		} else {
+			symbolsObject[symbol.category] = [symbol];
+		}
+		return symbolsObject;
+	},
+	{}
+);
 ---
 
-<Layout
-	title="Laundry Symbols List"
-	description="List of the most common symbols found on clothing describing the way to wash them"
->
+<Layout title={title} description={description}>
 	<SearchBar
 		current={lang}
+		prompt={searchPrompt}
 		languages={[
 			{
 				slug: "en",
@@ -71,30 +69,16 @@ const professional = symbols.filter((symbol) => {
 		]}
 	/>
 	<main class="m-auto mb-20 max-w-3xl bg-cyan-50 p-3">
-		<CategorySection
-			symbols={washing}
-			title="Washing"
-			icon="/img/symbols/washing/wash.svg"
-		/>
-		<CategorySection
-			symbols={bleaching}
-			title="Bleaching"
-			icon="/img/symbols/bleaching/bleach.svg"
-		/>
-		<CategorySection
-			symbols={drying}
-			title="Drying"
-			icon="/img/symbols/drying/dry.svg"
-		/>
-		<CategorySection
-			symbols={ironing}
-			title="Ironing"
-			icon="/img/symbols/ironing/iron.svg"
-		/>
-		<CategorySection
-			symbols={professional}
-			title="Professional Cleaning"
-			icon="/img/symbols/professional/professional.svg"
-		/>
+		{
+			Object.keys(symbolsByCategory).map((category) => {
+				return (
+					<CategorySection
+						symbols={symbolsByCategory[category]}
+						title={categories[category].name}
+						icon={categories[category].imageUrl}
+					/>
+				);
+			})
+		}
 	</main>
 </Layout>

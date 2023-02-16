@@ -1,20 +1,21 @@
 ---
-
 export interface Props {
     current: string;
-	languages: {
+    prompt: string;
+    languages: {
         slug: string;
         emoji: string;
-    }[]
+    }[];
 }
 
-const { current, languages } = Astro.props;
+const { current, languages, prompt = "search" } = Astro.props;
 
-const index = languages.findIndex(lang => lang.slug === current)
-const [ currentLanguage ] = languages.splice(index, 1);
+const index = languages.findIndex((lang) => lang.slug === current);
+const [currentLanguage] = languages.splice(index, 1);
 ---
+
 <div class="fixed top-3 flex w-full text-gray-600">
-    <div class="m-auto w-full max-w-xl px-4 flex gap-2">
+    <div class="m-auto flex w-full max-w-xl gap-2 px-4">
         <div class="absolute top-0 mt-4 ml-4">
             <svg
                 class="h-4 w-4 fill-current"
@@ -39,24 +40,53 @@ const [ currentLanguage ] = languages.splice(index, 1);
             type="search"
             name="query"
             id="search-query"
-            placeholder="Search"
+            placeholder={prompt}
             class="h-12 w-full grow rounded-full bg-white px-5 pl-10 text-sm shadow-md focus:outline-none"
         />
         <div id="language-menu" class="relative inline-block text-left">
-            <button type="button" class="p-3 w-20 inline-flex justify-center rounded-full shadow-md h-12 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 outline-none focus:outline-none" id="language-button" aria-expanded="true" aria-haspopup="true">
+            <button
+                type="button"
+                class="inline-flex h-12 w-20 justify-center rounded-full bg-white p-3 text-sm font-medium text-gray-700 shadow-md outline-none hover:bg-gray-50 focus:outline-none"
+                id="language-button"
+                aria-expanded="true"
+                aria-haspopup="true"
+            >
                 {currentLanguage.emoji}
-                <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                <svg
+                    class="-mr-1 ml-2 h-5 w-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                        clip-rule="evenodd"></path>
                 </svg>
             </button>
             <div id="language-options" class="hidden">
                 {
                     languages.map((language) => {
                         return (
-                            <div class="flex p-3 w-20 justify-center rounded-full shadow-md h-12 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 outline-none focus:outline-none mt-2" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-                                <a href={language.slug} class="text-gray-700 block px-4 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">{language.emoji}</a>
+                            <div
+                                class="mt-2 flex h-12 w-20 justify-center rounded-full bg-white p-3 text-sm font-medium text-gray-700 shadow-md outline-none hover:bg-gray-50 focus:outline-none"
+                                role="menu"
+                                aria-orientation="vertical"
+                                aria-labelledby="menu-button"
+                                tabindex="-1"
+                            >
+                                <a
+                                    href={language.slug}
+                                    class="block px-4 text-sm text-gray-700"
+                                    role="menuitem"
+                                    tabindex="-1"
+                                    id="menu-item-0"
+                                >
+                                    {language.emoji}
+                                </a>
                             </div>
-                        )
+                        );
                     })
                 }
             </div>
@@ -65,28 +95,39 @@ const [ currentLanguage ] = languages.splice(index, 1);
 </div>
 
 <script>
-    const searchInput = document.querySelector("#search-query") as HTMLInputElement;
-    const symbols = document.querySelectorAll("li>h2") as NodeListOf<HTMLHeadingElement>;
+    const searchInput = document.querySelector(
+        "#search-query"
+    ) as HTMLInputElement;
+    const symbols = document.querySelectorAll(
+        "li>h2"
+    ) as NodeListOf<HTMLHeadingElement>;
 
     searchInput.addEventListener("input", (event) => {
         const target = event.target as HTMLInputElement;
         const value = target.value.toLowerCase();
         symbols.forEach((element) => {
-            const isVisible = element.textContent!.toLowerCase().includes(value);
+            const isVisible = element
+                .textContent!.toLowerCase()
+                .includes(value);
             element.parentElement!.classList.toggle("hidden", !isVisible);
         });
     });
 
-    const languageMenu = document.querySelector("#language-menu") as HTMLDivElement;
-    const languageButton = document.querySelector("#language-button") as HTMLButtonElement;
-    const languageOptions = document.querySelector("#language-options") as HTMLDivElement;
+    const languageMenu = document.querySelector(
+        "#language-menu"
+    ) as HTMLDivElement;
+    const languageButton = document.querySelector(
+        "#language-button"
+    ) as HTMLButtonElement;
+    const languageOptions = document.querySelector(
+        "#language-options"
+    ) as HTMLDivElement;
 
     languageButton.addEventListener("click", (event) => {
-        console.log(event)
         languageOptions.classList.toggle("hidden");
     });
 
     languageMenu.addEventListener("mouseleave", (event) => {
         languageOptions.classList.add("hidden");
-    })
+    });
 </script>

@@ -18,20 +18,22 @@ const { title = "title", description = "description" } = Astro.props;
 		<title>{title}</title>
 		<meta name="description" content={description} />
 
-        <meta property="og:title" content={title} />
-        <meta
-          property="og:description"
-          content={description}
-        />
-
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
 	</head>
-	<header class="fixed flex w-full bottom-0 xl:left-52 xl:top-0 xl:h-full xl:w-fit">
-		<nav class="w-fit m-auto bg-cyan-100 p-3 rounded-t-xl xl:rounded-full drop-shadow-lg">
-			<ul class="grid grid-cols-5 xl:grid-rows-5 xl:grid-cols-1 gap-4">
+	<header
+		class="fixed bottom-0 flex w-full xl:left-52 xl:top-0 xl:h-full xl:w-fit"
+	>
+		<nav
+			class="m-auto w-fit rounded-t-xl bg-cyan-100 p-3 drop-shadow-lg xl:rounded-full"
+		>
+			<ul class="grid grid-cols-5 gap-4 xl:grid-cols-1 xl:grid-rows-5">
 				<li>
 					<a href="#washing">
 						<img
-							src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Waschen.svg"
+							width="48"
+							height="48"
+							src="/img/symbols/washing/wash.svg"
 							class="w-12"
 							alt="whashing symbol"
 						/>
@@ -40,7 +42,9 @@ const { title = "title", description = "description" } = Astro.props;
 				<li>
 					<a href="#bleaching">
 						<img
-							src="https://upload.wikimedia.org/wikipedia/commons/7/78/Bleichen.svg"
+							width="48"
+							height="48"
+							src="/img/symbols/bleaching/bleach.svg"
 							class="w-12"
 							alt="bleaching symbol"
 						/>
@@ -49,7 +53,9 @@ const { title = "title", description = "description" } = Astro.props;
 				<li>
 					<a href="#drying">
 						<img
-							src="https://upload.wikimedia.org/wikipedia/commons/6/61/Trocknen.svg"
+							width="48"
+							height="48"
+							src="/img/symbols/drying/dry.svg"
 							class="w-12"
 							alt="drying symbol"
 						/>
@@ -58,7 +64,9 @@ const { title = "title", description = "description" } = Astro.props;
 				<li>
 					<a href="#ironing">
 						<img
-							src="https://upload.wikimedia.org/wikipedia/commons/9/92/B%C3%BCgeln.svg"
+							width="48"
+							height="48"
+							src="/img/symbols/ironing/iron.svg"
 							class="w-12"
 							alt="ironing symbol"
 						/>
@@ -67,7 +75,9 @@ const { title = "title", description = "description" } = Astro.props;
 				<li>
 					<a href="#professional">
 						<img
-							src="https://upload.wikimedia.org/wikipedia/commons/7/75/Professionelle_reinigung.svg"
+							width="48"
+							height="48"
+							src="/img/symbols/professional/professional.svg"
 							class="w-12"
 							alt="professional symbol"
 						/>
@@ -79,4 +89,6 @@ const { title = "title", description = "description" } = Astro.props;
 	<body>
 		<slot />
 	</body>
+
+
 </html>

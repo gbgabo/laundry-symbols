@@ -12,88 +12,73 @@ interface Symbol {
 }
 
 interface Props {
-	symbols: Symbol[]; 
+	symbols: Symbol[];
 }
 
 export async function getStaticPaths() {
-
 	const paths = [
-		{ 
+		{
+			...symbolsByLang[0],
 			lang: undefined,
-			symbols: symbolsByLang[0].symbols
 		},
-		...symbolsByLang
-	]
-	
-	return paths.map((path) => { 
-		const { lang, symbols } = path;
-		return { 
-			params: { lang: lang }, 
-			props: { symbols },
-		}
-	})
+		...symbolsByLang,
+	];
+
+	return paths.map((path) => {
+		const { lang } = path;
+		return {
+			params: { lang: lang },
+			props: { ...path },
+		};
+	});
 }
 
-const { lang = "en" } =  Astro.params;
-const { symbols } = Astro.props;
+const { lang = "en" } = Astro.params;
+const { symbols, categories, title, description, searchPrompt } = Astro.props;
 
-const washing = symbols.filter((symbol) => {
-	return symbol.category === "washing";
-});
-const bleaching = symbols.filter((symbol) => {
-	return symbol.category === "bleaching";
-});
-const drying = symbols.filter((symbol) => {
-	return symbol.category === "drying";
-});
-const ironing = symbols.filter((symbol) => {
-	return symbol.category === "ironing";
-});
-const professional = symbols.filter((symbol) => {
-	return symbol.category === "professional";
-});
+interface SymbolObjectByAttribute {
+	[key: string]: Symbol[];
+}
+
+const symbolsByCategory: SymbolObjectByAttribute = symbols.reduce(
+	(symbolsObject: SymbolObjectByAttribute, symbol) => {
+		if (symbolsObject[symbol.category]) {
+			symbolsObject[symbol.category].push(symbol);
+		} else {
+			symbolsObject[symbol.category] = [symbol];
+		}
+		return symbolsObject;
+	},
+	{}
+);
 ---
 
-<Layout
-	title="Laundry Symbols List"
-	description="List of the most common symbols found on clothing describing the way to wash them"
->
-	<SearchBar 
+<Layout title={title} description={description}>
+	<SearchBar
 		current={lang}
-		languages={[{ 
-			slug: "en", 
-			emoji: "🇺🇸"
-		},{ 
-			slug: "pt-br", 
-			emoji: "🇧🇷"
-		}]
-		}
+		prompt={searchPrompt}
+		languages={[
+			{
+				slug: "en",
+				emoji: "🇺🇸",
+			},
+			{
+				slug: "pt-br",
+				emoji: "🇧🇷",
+			},
+		]}
 	/>
 	<main class="m-auto mb-20 max-w-3xl bg-cyan-50 p-3">
-		<CategorySection
-			symbols={washing}
-			title="Washing"
-			icon="https://upload.wikimedia.org/wikipedia/commons/f/f1/Waschen.svg"
-		/>
-		<CategorySection
-			symbols={bleaching}
-			title="Bleaching"
-			icon="https://upload.wikimedia.org/wikipedia/commons/7/78/Bleichen.svg"
-		/>
-		<CategorySection
-			symbols={drying}
-			title="Drying"
-			icon="https://upload.wikimedia.org/wikipedia/commons/6/61/Trocknen.svg"
-		/>
-		<CategorySection
-			symbols={ironing}
-			title="Ironing"
-			icon="https://upload.wikimedia.org/wikipedia/commons/9/92/B%C3%BCgeln.svg"
-		/>
-		<CategorySection
-			symbols={professional}
-			title="Professional Cleaning"
-			icon="https://upload.wikimedia.org/wikipedia/commons/7/75/Professionelle_reinigung.svg"
-		/>
+		{
+			Object.keys(symbolsByCategory).map((category) => {
+				return (
+					<CategorySection
+						symbols={symbolsByCategory[category]}
+						title={categories[category].name}
+						icon={categories[category].imageUrl}
+					/>
+				);
+			})
+		}
 	</main>
 </Layout>

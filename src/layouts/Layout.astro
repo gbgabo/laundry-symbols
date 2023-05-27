@@ -22,74 +22,88 @@ const { title = "title", description = "description" } = Astro.props;
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 	</head>
-	<header
-		class="fixed bottom-0 flex w-full xl:left-52 xl:top-0 xl:h-full xl:w-fit"
-	>
-		<nav
-			class="m-auto w-fit rounded-t-xl bg-cyan-100 p-3 drop-shadow-lg xl:rounded-full"
+	<div class="grid grid-cols-main">
+		<div class="col-start-2 col-end-3 flex flex-col items-center justify-center 
+					lg:col-start-1 lg:col-end-2 lg:h-screen lg:sticky lg:top-0">
+			<div class="bg-cyan-100 rounded-b-xl drop-shadow-md pt-16
+						lg:my-auto lg:mr-6 lg:rounded-r-2xl lg:pt-0 lg:max-w-sm">
+				<h1 class="text-lg font-bold p-4 text-center">
+					laundry-symbols
+				</h1>
+				<p class="px-6 pb-6">A lists containing most of the so called <i>laundry symbols</i> found on every clothing, indicating the manufacturer's suggestions as to methods of <b>washing</b>, <b>drying</b>, <b>dry-cleaning</b> and <b>ironing clothing</b>.</p>
+			</div>
+		</div>	
+		<body>
+			<div class="col-start-2 col-end-3">
+				<slot />
+			</div>
+		</body>
+		<header
+			class="col-start-3 col-end-4 fixed bottom-0 flex w-full lg:h-screen lg:sticky lg:top-0"
 		>
-			<ul class="grid grid-cols-5 gap-4 xl:grid-cols-1 xl:grid-rows-5">
-				<li>
-					<a href="#washing">
-						<img
-							width="48"
-							height="48"
-							src="/img/symbols/washing/wash.svg"
-							class="w-12"
-							alt="whashing symbol"
-						/>
-					</a>
-				</li>
-				<li>
-					<a href="#bleaching">
-						<img
-							width="48"
-							height="48"
-							src="/img/symbols/bleaching/bleach.svg"
-							class="w-12"
-							alt="bleaching symbol"
-						/>
-					</a>
-				</li>
-				<li>
-					<a href="#drying">
-						<img
-							width="48"
-							height="48"
-							src="/img/symbols/drying/dry.svg"
-							class="w-12"
-							alt="drying symbol"
-						/>
-					</a>
-				</li>
-				<li>
-					<a href="#ironing">
-						<img
-							width="48"
-							height="48"
-							src="/img/symbols/ironing/iron.svg"
-							class="w-12"
-							alt="ironing symbol"
-						/>
-					</a>
-				</li>
-				<li>
-					<a href="#professional">
-						<img
-							width="48"
-							height="48"
-							src="/img/symbols/professional/professional.svg"
-							class="w-12"
-							alt="professional symbol"
-						/>
-					</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
-	<body>
-		<slot />
-	</body>
+			<nav
+				class="m-auto w-fit rounded-t-xl bg-cyan-100 p-3 drop-shadow-lg lg:rounded-full"
+			>
+				<ul class="grid grid-cols-5 gap-4 lg:grid-cols-1 lg:grid-rows-5">
+					<li>
+						<a href="#washing">
+							<img
+								width="48"
+								height="48"
+								src="/img/symbols/washing/wash.svg"
+								class="w-12"
+								alt="whashing symbol"
+							/>
+						</a>
+					</li>
+					<li>
+						<a href="#bleaching">
+							<img
+								width="48"
+								height="48"
+								src="/img/symbols/bleaching/bleach.svg"
+								class="w-12"
+								alt="bleaching symbol"
+							/>
+						</a>
+					</li>
+					<li>
+						<a href="#drying">
+							<img
+								width="48"
+								height="48"
+								src="/img/symbols/drying/dry.svg"
+								class="w-12"
+								alt="drying symbol"
+							/>
+						</a>
+					</li>
+					<li>
+						<a href="#ironing">
+							<img
+								width="48"
+								height="48"
+								src="/img/symbols/ironing/iron.svg"
+								class="w-12"
+								alt="ironing symbol"
+							/>
+						</a>
+					</li>
+					<li>
+						<a href="#professional">
+							<img
+								width="48"
+								height="48"
+								src="/img/symbols/professional/professional.svg"
+								class="w-12"
+								alt="professional symbol"
+							/>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+	</div>
 
 
 </html>

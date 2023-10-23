@@ -17,15 +17,17 @@ const { title, icon, symbols } = Astro.props;
 ---
 
 <div id={symbols[0].category}>
-	<div class="mb-3 flex flex-row items-center pt-16">
-		<img
-			width="48"
-			height="48"
-			src={icon}
-			class="mr-3 w-12"
-			alt={`${title} symbol`}
-		/>
-		<h1 class="font-medium">{title}</h1>
+	<div class="pt-16 sticky top-0">
+		<div class="mb-3 mx-auto flex flex-row items-center px-4 py-2 rounded-full bg-cyan-50 w-fit">
+			<img
+				width="48"
+				height="48"
+				src={icon}
+				class="mr-2 w-9"
+				alt={`${title} symbol`}
+			/>
+			<h1 class="font-medium">{title}</h1>
+		</div>
 	</div>
 	<ul role="list" class="grid grid-cols-2 gap-4 sm:grid-cols-3">
 		{

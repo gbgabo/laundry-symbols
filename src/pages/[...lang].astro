@@ -11,8 +11,17 @@ interface Symbol {
 	category: string;
 }
 
-interface Props {
+interface Props {	
+    title: string;
+    description: string;
+    categories: {
+    	[key: string]: {
+          name: string,
+          imageUrl: string
+        }
+    }
 	symbols: Symbol[];
+	searchPrompt?: string;
 }
 
 export async function getStaticPaths() {
@@ -34,7 +43,7 @@ export async function getStaticPaths() {
 }
 
 const { lang = "en" } = Astro.params;
-const { symbols, categories, title, description, searchPrompt } = Astro.props;
+const { title, description, symbols, categories, searchPrompt } = Astro.props;
 
 interface SymbolObjectByAttribute {
 	[key: string]: Symbol[];

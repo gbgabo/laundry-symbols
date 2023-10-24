@@ -17,8 +17,8 @@ const { title, icon, symbols } = Astro.props;
 ---
 
 <div id={symbols[0].category}>
-	<a class="block pt-16 sticky top-0" href={`#${title.toLowerCase()}`}>
-		<div class="mb-3 mx-auto flex flex-row items-center px-4 py-2 rounded-full bg-cyan-50 w-fit">
+	<div class="pt-16 sticky top-0" >
+		<a class="mb-3 mx-auto flex flex-row items-center px-4 py-2 rounded-full bg-cyan-50 w-fit" href={`#${title.toLowerCase()}`}>
 			<img
 				width="48"
 				height="48"
@@ -27,8 +27,8 @@ const { title, icon, symbols } = Astro.props;
 				alt={`${title} symbol`}
 			/>
 			<h1 class="font-medium">{title}</h1>
-		</div>
-	</a>
+		</a>
+	</div>
 	<ul role="list" class="grid grid-cols-2 gap-4 sm:grid-cols-3">
 		{
 			symbols.map(({ title, image }) => {

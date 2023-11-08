@@ -1,5 +1,5 @@
 {
-  "name": "@example/basics",
+  "name": "laundry-symbols",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -11,12 +11,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^3.0.1",
-    "astro": "^2.0.4",
+    "@astrojs/tailwind": "^5.0.2",
+    "astro": "^3.4.4",
     "tailwindcss": "^3.2.4"
   },
   "devDependencies": {
-    "prettier": "^2.8.3",
-    "prettier-plugin-tailwindcss": "^0.2.2"
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.7"
   }
 }

@@ -43,7 +43,7 @@ export async function getStaticPaths() {
 }
 
 const { lang = "en" } = Astro.params;
-const { title, description, symbols, categories, searchPrompt } = Astro.props;
+const { title, description, symbols, categories, searchPrompt, footer } = Astro.props;
 
 interface SymbolObjectByAttribute {
 	[key: string]: Symbol[];
@@ -62,7 +62,7 @@ const symbolsByCategory: SymbolObjectByAttribute = symbols.reduce(
 );
 ---
 
-<Layout title={title} description={description}>
+<Layout title={title} description={description} footer={footer}>
 	<SearchBar
 		current={lang}
 		prompt={searchPrompt}

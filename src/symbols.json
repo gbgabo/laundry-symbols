@@ -5,6 +5,7 @@
       "emoji": "🇺🇸",
       "title": "Laundry Symbols List",
       "description": "List of the most common symbols found on clothing, describing the best way to wash them",
+      "footer": "<footer class='flex flex-col items-center mb-24 gap-2'><p>Made with ♥ by <a class='text-cyan-400' href='https://gabo.link'>gabo</a></p><p>Check the <a class='text-cyan-400' href='https://github.com/gbgabo/laundry-symbols'>project on github</a></p></footer>",
       "categories": {
         "washing": {
           "name": "Washing",
@@ -220,6 +221,7 @@
       "emoji": "🇧🇷",
       "title": "Lista de Simbolos de Lavagem",
       "description": "Lista dos simbolos mais comuns encontrados nas roupas, descrevendo a melhor forma de limpá-las",
+      "footer": "<footer class='flex flex-col items-center mb-24 gap-2'><p>Feito com ♥ por <a class='text-cyan-400' href='https://gabo.link'>gabo</a></p><p>Visite o <a class='text-cyan-400' href='https://github.com/gbgabo/laundry-symbols'>projeto no github</a></p></footer>",
       "searchPrompt": "Pesquisar",
       "categories": {
         "washing": {

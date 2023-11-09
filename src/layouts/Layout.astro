@@ -4,9 +4,10 @@ import "@fontsource-variable/gabarito";
 export interface Props {
 	title?: string;
 	description?: string;
+	footer: string;
 }
 
-const { title = "title", description = "description" } = Astro.props;
+const { title = "title", description = "description", footer } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -38,6 +39,7 @@ const { title = "title", description = "description" } = Astro.props;
 		<body>
 			<div class="col-start-2 col-end-3">
 				<slot />
+				<Fragment set:html={footer}/>
 			</div>
 		</body>
 		<header
@@ -54,7 +56,7 @@ const { title = "title", description = "description" } = Astro.props;
 								height="48"
 								src="/img/symbols/washing/wash.svg"
 								class="w-12"
-								alt="whashing symbol"
+								alt="washing symbol"
 							/>
 						</a>
 					</li>
@@ -112,6 +114,4 @@ const { title = "title", description = "description" } = Astro.props;
 			font-family: "Gabarito Variable";
 		}
 	</style>
-
-
 </html>

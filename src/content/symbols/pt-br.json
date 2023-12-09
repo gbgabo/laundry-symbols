@@ -1,0 +1,217 @@
+{
+  "lang": "pt-br",
+  "emoji": "🇧🇷",
+  "title": "Lista de Simbolos de Lavagem",
+  "description": "Lista dos simbolos mais comuns encontrados nas roupas, descrevendo a melhor forma de limpá-las",
+  "footer": "<footer class='flex flex-col items-center mb-24 gap-2'><p>Feito com ♥ por <a class='text-cyan-400' href='https://gabo.link'>gabo</a></p><p>Visite o <a class='text-cyan-400' href='https://github.com/gbgabo/laundry-symbols'>projeto no github</a></p></footer>",
+  "searchPrompt": "Pesquisar",
+  "categories": {
+    "washing": {
+      "name": "Lavagem",
+      "imageUrl": "/img/symbols/washing/wash.svg"
+    },
+    "bleaching": {
+      "name": "Alvejante",
+      "imageUrl": "/img/symbols/bleaching/bleach.svg"
+    },
+    "drying": {
+      "name": "Secagem",
+      "imageUrl": "/img/symbols/drying/dry.svg"
+    },
+    "ironing": {
+      "name": "Ferro",
+      "imageUrl": "/img/symbols/ironing/iron.svg"
+    },
+    "professional": {
+      "name": "Profissional",
+      "imageUrl": "/img/symbols/professional/professional.svg"
+    }
+  },
+  "symbols": [
+    {
+      "title": "Lavar à temperatura de 30°C ou abaixo",
+      "image": "/img/symbols/washing/wash_30.svg",
+      "category": "washing"
+    },
+    {
+      "title": "Lavar à temperatura de 40°C ou abaixo",
+      "image": "/img/symbols/washing/wash_40.svg",
+      "category": "washing"
+    },
+    {
+      "title": "Lavar à temperatura de 50°C ou abaixo",
+      "image": "/img/symbols/washing/wash_50.svg",
+      "category": "washing"
+    },
+    {
+      "title": "Lavar à temperatura de 60°C ou abaixo",
+      "image": "/img/symbols/washing/wash_60.svg",
+      "category": "washing"
+    },
+    {
+      "title": "Lavar à mão",
+      "image": "/img/symbols/washing/wash_hand.svg",
+      "category": "washing"
+    },
+    {
+      "title": "Não lavar",
+      "image": "/img/symbols/washing/wash_not.svg",
+      "category": "washing"
+    },
+    {
+      "title": "Alvejante com e sem cloro permitido",
+      "image": "/img/symbols/bleaching/bleach.svg",
+      "category": "bleaching"
+    },
+    {
+      "title": "Alvejante com cloro permitido (obsoleto)",
+      "image": "/img/symbols/bleaching/bleach_chlor.svg",
+      "category": "bleaching"
+    },
+    {
+      "title": "Alvejante sem cloro quando necessário",
+      "image": "/img/symbols/bleaching/bleach_not_chlor.svg",
+      "category": "bleaching"
+    },
+    {
+      "title": "Não alvejar",
+      "image": "/img/symbols/bleaching/bleach_not.svg",
+      "category": "bleaching"
+    },
+    {
+      "title": "Não alvejar",
+      "image": "/img/symbols/bleaching/bleach_not_2.svg",
+      "category": "bleaching"
+    },
+    {
+      "title": "Secar na secadora",
+      "image": "/img/symbols/drying/dry_tumble.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Secagem em tambor (temperatura baixa)",
+      "image": "/img/symbols/drying/dry_tumble_low.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Secagem em tambor (temperatura alta)",
+      "image": "/img/symbols/drying/dry_tumble_high.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Não secar em tambor",
+      "image": "/img/symbols/drying/dry_not_tumble.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Secagem ao ar livre",
+      "image": "/img/symbols/drying/dry_line.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Secagem plana",
+      "image": "/img/symbols/drying/dry_flat.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Secagem por gotejamento",
+      "image": "/img/symbols/drying/dry_drip.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Secagem à sombra",
+      "image": "/img/symbols/drying/dry_shade.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Secagem ao ar livre à sombra",
+      "image": "/img/symbols/drying/dry_line_shade.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Secagem plana à sombra",
+      "image": "/img/symbols/drying/dry_flat_shade.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Secagem por gotejamento à sombra",
+      "image": "/img/symbols/drying/dry_drip_shade.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Ferro a baixa temperatura",
+      "image": "/img/symbols/ironing/iron_low.svg",
+      "category": "ironing"
+    },
+    {
+      "title": "Ferro a temperatura média",
+      "image": "/img/symbols/ironing/iron_medium.svg",
+      "category": "ironing"
+    },
+    {
+      "title": "Ferro a alta temperatura",
+      "image": "/img/symbols/ironing/iron_high.svg",
+      "category": "ironing"
+    },
+    {
+      "title": "Não passar a ferro",
+      "image": "/img/symbols/ironing/iron_not.svg",
+      "category": "ironing"
+    },
+    {
+      "title": "Limpeza a seco, apenas com solvente hidrocarboneto (HCS)",
+      "image": "/img/symbols/professional/pro_hcs.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Limpeza suave com solventes hidrocarbonetos",
+      "image": "/img/symbols/professional/pro_hcs_gentle.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Limpeza muito suave com solventes hidrocarbonetos",
+      "image": "/img/symbols/professional/pro_hcs_very_gentle.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Limpeza a seco, apenas com tetrachloroetileno (PCE)",
+      "image": "/img/symbols/professional/pro_pce.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Limpeza suave com PCE",
+      "image": "/img/symbols/professional/pro_pce_gentle.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Limpeza muito suave com PCE",
+      "image": "/img/symbols/professional/pro_pce_very_gentle.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Não limpe quimicamente",
+      "image": "/img/symbols/professional/pro_not_chem.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Limpeza a umido profissional",
+      "image": "/img/symbols/professional/pro_wet.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Limpeza a umido suave",
+      "image": "/img/symbols/professional/pro_wet_gentle.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Limpeza a umido muito suave",
+      "image": "/img/symbols/professional/pro_wet_very_gentle.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Não limpe a umido",
+      "image": "/img/symbols/professional/pro_not_wet.svg",
+      "category": "professional"
+    }
+  ]
+}

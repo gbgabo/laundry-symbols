@@ -3,7 +3,7 @@ import Layout from "~/layouts/Layout.astro";
 import CategorySection from "~/components/CategorySection.astro";
 import SearchBar from "~/components/SearchBar.astro";
 
-import { symbolsByLang } from "~/symbols.json";
+import { getCollection } from 'astro:content';
 
 interface Symbol {
 	title: string;
@@ -11,45 +11,23 @@ interface Symbol {
 	category: string;
 }
 
-interface Props {	
-    title: string;
-    description: string;
-    categories: {
-    	[key: string]: {
-          name: string,
-          imageUrl: string
-        }
-    }
-	symbols: Symbol[];
-	searchPrompt?: string;
-}
-
-export async function getStaticPaths() {
-	const paths = [
-		{
-			...symbolsByLang[0],
-			lang: undefined,
-		},
-		...symbolsByLang,
-	];
-
-	return paths.map((path) => {
-		const { lang } = path;
-		return {
-			params: { lang: lang },
-			props: { ...path },
-		};
-	});
-}
-
-const { lang = "en" } = Astro.params;
-const { title, description, symbols, categories, searchPrompt, footer } = Astro.props;
-
 interface SymbolObjectByAttribute {
 	[key: string]: Symbol[];
 }
 
-const symbolsByCategory: SymbolObjectByAttribute = symbols.reduce(
+export async function getStaticPaths() {
+	const symbolsCollection = await getCollection('symbols');
+	return symbolsCollection.map(entry => ({
+		params: { lang: entry.id }, 
+		props: { entry },
+	}));
+}
+
+const { lang } = Astro.params;
+const { entry } = Astro.props;
+const { title, description, symbols, categories, searchPrompt, footer } = entry.data;
+
+const symbolsByCategory = symbols.reduce(
 	(symbolsObject: SymbolObjectByAttribute, symbol) => {
 		if (symbolsObject[symbol.category]) {
 			symbolsObject[symbol.category].push(symbol);
@@ -60,6 +38,8 @@ const symbolsByCategory: SymbolObjectByAttribute = symbols.reduce(
 	},
 	{}
 );
+
+// const symbolsByCategory = Object.groupBy(symbols, ({ category }) => category);
 ---
 
 <Layout title={title} description={description} footer={footer}>

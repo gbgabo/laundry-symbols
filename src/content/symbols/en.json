@@ -1,0 +1,217 @@
+{
+  "lang": "en",
+  "emoji": "🇺🇸",
+  "title": "Laundry Symbols List",
+  "description": "List of the most common symbols found on clothing, describing the best way to wash them",
+  "footer": "<footer class='flex flex-col items-center mb-24 gap-2'><p>Made with ♥ by <a class='text-cyan-400' href='https://gabo.link'>gabo</a></p><p>Check the <a class='text-cyan-400' href='https://github.com/gbgabo/laundry-symbols'>project on github</a></p></footer>",
+  "searchPrompt": "Search",
+  "categories": {
+    "washing": {
+      "name": "Washing",
+      "imageUrl": "/img/symbols/washing/wash.svg"
+    },
+    "bleaching": {
+      "name": "Bleaching",
+      "imageUrl": "/img/symbols/bleaching/bleach.svg"
+    },
+    "drying": {
+      "name": "Drying",
+      "imageUrl": "/img/symbols/drying/dry.svg"
+    },
+    "ironing": {
+      "name": "Ironing",
+      "imageUrl": "/img/symbols/ironing/iron.svg"
+    },
+    "professional": {
+      "name": "Professional",
+      "imageUrl": "/img/symbols/professional/professional.svg"
+    }
+  },
+  "symbols": [
+    {
+      "title": "Wash at or below 30°C",
+      "image": "/img/symbols/washing/wash_30.svg",
+      "category": "washing"
+    },
+    {
+      "title": "Wash at or below 40°C",
+      "image": "/img/symbols/washing/wash_40.svg",
+      "category": "washing"
+    },
+    {
+      "title": "Wash at or below 50°C",
+      "image": "/img/symbols/washing/wash_50.svg",
+      "category": "washing"
+    },
+    {
+      "title": "Wash at or below 60°C",
+      "image": "/img/symbols/washing/wash_60.svg",
+      "category": "washing"
+    },
+    {
+      "title": "Hand wash",
+      "image": "/img/symbols/washing/wash_hand.svg",
+      "category": "washing"
+    },
+    {
+      "title": "Do not wash",
+      "image": "/img/symbols/washing/wash_not.svg",
+      "category": "washing"
+    },
+    {
+      "title": "Allowed both chlorine and non-chlorine bleach",
+      "image": "/img/symbols/bleaching/bleach.svg",
+      "category": "bleaching"
+    },
+    {
+      "title": "Bleaching with chlorine allowed (obsolete)",
+      "image": "/img/symbols/bleaching/bleach_chlor.svg",
+      "category": "bleaching"
+    },
+    {
+      "title": "Non-chlorine bleach when needed",
+      "image": "/img/symbols/bleaching/bleach_not_chlor.svg",
+      "category": "bleaching"
+    },
+    {
+      "title": "Do not bleach",
+      "image": "/img/symbols/bleaching/bleach_not.svg",
+      "category": "bleaching"
+    },
+    {
+      "title": "Do not bleach",
+      "image": "/img/symbols/bleaching/bleach_not_2.svg",
+      "category": "bleaching"
+    },
+    {
+      "title": "Tumble drying",
+      "image": "/img/symbols/drying/dry_tumble.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Tumble drying (low temperature)",
+      "image": "/img/symbols/drying/dry_tumble_low.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Tumble drying (high temperature)",
+      "image": "/img/symbols/drying/dry_tumble_high.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Do not tumble dry",
+      "image": "/img/symbols/drying/dry_not_tumble.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Line drying",
+      "image": "/img/symbols/drying/dry_line.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Dry flat",
+      "image": "/img/symbols/drying/dry_flat.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Drip dry",
+      "image": "/img/symbols/drying/dry_drip.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Dry in the shade",
+      "image": "/img/symbols/drying/dry_shade.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Line dry in the shade",
+      "image": "/img/symbols/drying/dry_line_shade.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Dry flat in shade",
+      "image": "/img/symbols/drying/dry_flat_shade.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Drip dry in shade",
+      "image": "/img/symbols/drying/dry_drip_shade.svg",
+      "category": "drying"
+    },
+    {
+      "title": "Iron at low temperature",
+      "image": "/img/symbols/ironing/iron_low.svg",
+      "category": "ironing"
+    },
+    {
+      "title": "Iron at medium temperature",
+      "image": "/img/symbols/ironing/iron_medium.svg",
+      "category": "ironing"
+    },
+    {
+      "title": "Iron at high temperature",
+      "image": "/img/symbols/ironing/iron_high.svg",
+      "category": "ironing"
+    },
+    {
+      "title": "Do not iron",
+      "image": "/img/symbols/ironing/iron_not.svg",
+      "category": "ironing"
+    },
+    {
+      "title": "Dry clean, hydrocarbon solvent only (HCS)",
+      "image": "/img/symbols/professional/pro_hcs.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Gentle cleaning with hydrocarbon solvents",
+      "image": "/img/symbols/professional/pro_hcs_gentle.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Very gentle cleaning with hydrocarbon solvents",
+      "image": "/img/symbols/professional/pro_hcs_very_gentle.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Dry clean, tetrachloroethylene (PCE) only",
+      "image": "/img/symbols/professional/pro_pce.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Gentle cleaning with PCE",
+      "image": "/img/symbols/professional/pro_pce_gentle.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Very gentle cleaning with PCE",
+      "image": "/img/symbols/professional/pro_pce_very_gentle.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Do not chemical clean",
+      "image": "/img/symbols/professional/pro_not_chem.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Professional wet cleaning",
+      "image": "/img/symbols/professional/pro_wet.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Gentle wet cleaning",
+      "image": "/img/symbols/professional/pro_wet_gentle.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Very gentle wet cleaning",
+      "image": "/img/symbols/professional/pro_wet_very_gentle.svg",
+      "category": "professional"
+    },
+    {
+      "title": "Do not wet clean",
+      "image": "/img/symbols/professional/pro_not_wet.svg",
+      "category": "professional"
+    }
+  ]
+}

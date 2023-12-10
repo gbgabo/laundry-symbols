@@ -7,6 +7,14 @@ export interface Props {
 	footer: string;
 }
 
+const categories = [
+	{ name: 'washing', img: "/img/symbols/washing/wash.svg" },
+	{ name: 'bleaching', img:"/img/symbols/bleaching/bleach.svg" },
+	{ name: 'drying', img:"/img/symbols/drying/dry.svg" },
+	{ name: 'ironing', img:"/img/symbols/ironing/iron.svg" },
+	{ name: 'professional', img:"/img/symbols/professional/professional.svg" }
+]
+
 const { title = "title", description = "description", footer } = Astro.props;
 ---
 
@@ -33,7 +41,9 @@ const { title = "title", description = "description", footer } = Astro.props;
 				<h1 class="text-xl font-bold p-4 text-center tracking-wider">
 					laundry-symbols
 				</h1>
-				<p class="px-6 pb-6">{description}</p>
+				<p class="px-6 pb-6">
+					{description}
+				</p>
 			</div>
 		</div>	
 		<body>
@@ -42,68 +52,22 @@ const { title = "title", description = "description", footer } = Astro.props;
 				<Fragment set:html={footer}/>
 			</div>
 		</body>
-		<header
-			class="col-start-3 col-end-4 fixed bottom-0 flex w-full lg:h-screen lg:sticky lg:top-0"
-		>
-			<nav
-				class="m-auto w-fit rounded-t-xl bg-cyan-100 p-3 drop-shadow-lg lg:rounded-full"
-			>
+		<header class="col-start-3 col-end-4 fixed bottom-0 flex w-full lg:h-screen lg:sticky lg:top-0">
+			<nav class="m-auto w-fit rounded-t-xl bg-cyan-100 p-3 drop-shadow-lg lg:rounded-full">
 				<ul class="grid grid-cols-5 gap-4 lg:grid-cols-1 lg:grid-rows-5">
-					<li>
-						<a href="#washing">
+					{
+						categories.map(({name, img}) => (<li>
+						<a href={`#${name}`}>
 							<img
 								width="48"
 								height="48"
-								src="/img/symbols/washing/wash.svg"
+								src={img}
 								class="w-12"
-								alt="washing symbol"
+								alt={`${name} symbol`}
 							/>
 						</a>
-					</li>
-					<li>
-						<a href="#bleaching">
-							<img
-								width="48"
-								height="48"
-								src="/img/symbols/bleaching/bleach.svg"
-								class="w-12"
-								alt="bleaching symbol"
-							/>
-						</a>
-					</li>
-					<li>
-						<a href="#drying">
-							<img
-								width="48"
-								height="48"
-								src="/img/symbols/drying/dry.svg"
-								class="w-12"
-								alt="drying symbol"
-							/>
-						</a>
-					</li>
-					<li>
-						<a href="#ironing">
-							<img
-								width="48"
-								height="48"
-								src="/img/symbols/ironing/iron.svg"
-								class="w-12"
-								alt="ironing symbol"
-							/>
-						</a>
-					</li>
-					<li>
-						<a href="#professional">
-							<img
-								width="48"
-								height="48"
-								src="/img/symbols/professional/professional.svg"
-								class="w-12"
-								alt="professional symbol"
-							/>
-						</a>
-					</li>
+					</li>))
+					}
 				</ul>
 			</nav>
 		</header>

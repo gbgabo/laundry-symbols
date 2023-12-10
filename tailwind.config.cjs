@@ -8,6 +8,6 @@ module.exports = {
       },
     },
   },
-  safelist: ["mb-24", "text-cyan-400"],
+  safelist: ["text-cyan-400"],
   plugins: [],
 };

@@ -6,11 +6,12 @@
    id="レイヤー_1"
    x="0px"
    y="0px"
-   viewBox="0 0 170.1 170.1"
-   style="enable-background:new 0 0 170.1 170.1;"
+   viewBox="0 0 374.99999 374.99999"
    xml:space="preserve"
    sodipodi:docname="wring.svg"
    inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
+   width="375"
+   height="375"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +25,9 @@
    inkscape:pageopacity="0.0"
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#d1d1d1"
-   inkscape:zoom="4.7207523"
-   inkscape:cx="85.050003"
-   inkscape:cy="85.050003"
+   inkscape:zoom="1.1801881"
+   inkscape:cx="250.38382"
+   inkscape:cy="251.23114"
    inkscape:window-width="1920"
    inkscape:window-height="1012"
    inkscape:window-x="0"
@@ -39,21 +40,25 @@
 	.st0{fill:none;stroke:#000000;stroke-width:1.5475;}
 </style>
 <g
-   id="g6">
+   id="g6"
+   transform="translate(8.184908,1.4428453)">
 	
 	
 	
 	<path
    class="st0"
-   d="M14.2,106V64.1c0,0,29.7-5.4,48.6,8.1c0,0-6.7,24.3-21.6,29.7C26.3,107.3,14.2,106,14.2,106z"
-   id="path4" />
+   d="m 16.559764,234.06905 v -96.25192 c 0,0 68.226299,-12.40478 111.643036,18.60717 0,0 -15.39111,55.82152 -49.619128,68.2263 -34.228009,12.40478 -62.023908,9.41845 -62.023908,9.41845 z"
+   id="path4"
+   style="stroke-width:12.5;stroke-dasharray:none" />
 	<path
    class="st0"
-   d="M62.8,72.2c0,0-3.8,13.7-12,22.8c0,0,6.6,13.7,28.2,13.7c21.6,0,27-14.8,27-14.8s10.8-21.6,14.8-24.3   c0,0-6.7-8.1-29.7-8.1C68.2,61.4,62.8,72.2,62.8,72.2z"
-   id="path5" />
+   d="m 128.2028,156.4243 c 0,0 -8.72929,31.47139 -27.56619,52.37575 0,0 15.16141,31.47138 64.78053,31.47138 49.61913,0 62.02391,-33.99828 62.02391,-33.99828 0,0 24.80956,-49.61914 33.99829,-55.82153 0,0 -15.39111,-18.60717 -68.2263,-18.60717 -52.60546,-0.22972 -65.01024,24.57985 -65.01024,24.57985 z"
+   id="path5"
+   style="stroke-width:12.5;stroke-dasharray:none" />
 	<path
    class="st0"
-   d="M106,93.8c0,0,10.8-21.6,14.8-24.3c0,0,20.2-5.4,35.1-5.4v40.5C155.9,104.6,124.9,111.4,106,93.8z"
-   id="path6" />
+   d="m 227.44105,206.04343 c 0,0 24.80956,-49.61913 33.99829,-55.82153 0,0 46.40307,-12.40477 80.63108,-12.40477 v 93.03586 c 0,0 -71.21264,15.62084 -114.62937,-24.80956 z"
+   id="path6"
+   style="stroke-width:12.5;stroke-dasharray:none" />
 </g>
 </svg>

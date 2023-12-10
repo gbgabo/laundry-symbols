@@ -68,6 +68,11 @@
       "category": "washing"
     },
     {
+      "title": "Wash at or below 40°C, can be washed in washing machine",
+      "image": "/img/symbols/washing/wash_40_mild_machine.svg",
+      "category": "washing"
+    },
+    {
       "title": "Wash at or below 50°C",
       "image": "/img/symbols/washing/wash_50.svg",
       "category": "washing"

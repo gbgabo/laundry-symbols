@@ -6,6 +6,7 @@ const categoryKey = z.enum([
   "drying",
   "ironing",
   "professional",
+  "wringing",
 ]);
 
 const symbol = z.object({

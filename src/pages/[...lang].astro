@@ -45,11 +45,11 @@ const symbolsByCategory = symbols.reduce(
 
 <Layout title={title} description={description}>
 	<Fragment slot="top-bar">
-		<div class="grid grid-cols-9 gap-2">
-			<div class="col-span-7">
+		<div class="grid grid-cols-12 gap-2">
+			<div class="col-span-9 md:col-span-10">
 				<SearchBar placeholder={searchPrompt}/>
 			</div>
-			<div class="col-span-2">
+			<div class="col-span-3 md:col-span-2">
 				<LanguagePicker current={lang} languages={[ { slug: "en", emoji: "🇺🇸" }, { slug: "pt-br", emoji: "🇧🇷" }]}
 				/>
 			</div>

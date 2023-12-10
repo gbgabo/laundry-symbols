@@ -4,7 +4,6 @@ import "@fontsource-variable/gabarito";
 export interface Props {
 	title?: string;
 	description?: string;
-	footer: string;
 }
 
 const categories = [
@@ -15,7 +14,7 @@ const categories = [
 	{ name: 'professional', img:"/img/symbols/professional/professional.svg" }
 ]
 
-const { title = "title", description = "description", footer } = Astro.props;
+const { title = "title", description = "description"} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -48,8 +47,13 @@ const { title = "title", description = "description", footer } = Astro.props;
 		</div>	
 		<body>
 			<div class="col-start-2 col-end-3">
+				<div class="sticky top-3 w-full z-10 px-4">
+					<slot name="top-bar"/>
+				</div>
 				<slot />
-				<Fragment set:html={footer}/>
+				<footer class='flex flex-col items-center mb-24 gap-2'>
+					<slot name="footer"/>
+				</footer>
 			</div>
 		</body>
 		<header class="col-start-3 col-end-4 fixed bottom-0 flex w-full lg:h-screen lg:sticky lg:top-0">

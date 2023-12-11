@@ -13,6 +13,12 @@ const symbol = z.object({
   title: z.string(),
   image: z.string(),
   category: categoryKey,
+  info: z.object({
+      legacy: z.boolean(),
+    })
+    .default({
+      legacy: false
+    })
 });
 
 const symbolCollection = defineCollection({

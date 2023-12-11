@@ -5,6 +5,9 @@ interface Symbol {
 	title: string;
 	image: string;
 	category: string;
+	info: {
+		legacy: boolean
+	}
 }
 
 export interface Props {
@@ -31,8 +34,8 @@ const { title, icon, symbols } = Astro.props;
 	</div>
 	<ul role="list" class="grid grid-cols-2 gap-4 sm:grid-cols-3">
 		{
-			symbols.map(({ title, image }) => {
-				return <Card title={title} image={image} />;
+			symbols.map((symbol) => {
+				return <Card symbol={symbol} />;
 			})
 		}
 	</ul>

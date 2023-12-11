@@ -1,10 +1,17 @@
 ---
 export interface Props {
-	title: string;
-	image: string;
+	symbol: {
+		title: string;
+		image: string;
+		category: string;
+		info: {
+			legacy: boolean;
+		}
+	}
 }
 
-const { title, image } = Astro.props;
+const { symbol } = Astro.props;
+const { title, image, info } = symbol;
 ---
 
 <li class="flex flex-col align-center items-center rounded bg-white p-4 shadow-md">
@@ -12,4 +19,5 @@ const { title, image } = Astro.props;
 	<p class="symbol-title break-words text-center">
 		{title}
 	</p>
+	<span class="hidden symbol-info">{info.legacy.toString()}</span>
 </li>

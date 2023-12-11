@@ -1,0 +1,33 @@
+<fieldset>
+    <legend>Filter:</legend>
+
+    <div>
+        <input type="radio" id="all" name="legacy" value="" checked />
+        <label for="all">All</label>
+    </div>
+
+    <div>
+        <input type="radio" id="new" name="legacy" value="false" />
+        <label for="new">Standard</label>
+    </div>
+    
+    <div>
+        <input type="radio" id="legacy" name="legacy" value="true" />
+        <label for="legacy">Non Standard</label>
+    </div>
+</fieldset>
+
+<script>
+    const filterInput = document.querySelector("fieldset") as HTMLFieldSetElement;
+
+    const cardAttribute = document.querySelectorAll(".symbol-info") as NodeListOf<HTMLSpanElement>;
+
+    filterInput.addEventListener("input", (event) => {
+        const target = event.target as HTMLInputElement;
+        const isLegacy = target.value;
+        cardAttribute.forEach((element) => {
+            const isVisible = !isLegacy || element.textContent?.toString() == isLegacy;
+            element.parentElement!.classList.toggle("hidden", !isVisible);
+        });
+    });
+</script>

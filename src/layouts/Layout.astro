@@ -1,5 +1,6 @@
 ---
 import "@fontsource-variable/gabarito";
+import Filter from "~/components/Filter.astro";
 
 export interface Props {
 	title?: string;
@@ -43,6 +44,7 @@ const { title = "title", description = "description"} = Astro.props;
 				<p class="px-6 pb-6">
 					{description}
 				</p>
+				<Filter/>
 			</div>
 		</div>	
 		<body>

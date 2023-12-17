@@ -1,23 +1,56 @@
 <fieldset class="p-4">
-    <legend>Filter:</legend>
-    <div class="grid grid-rows-2 grid-cols-2 h-24 items-stretch gap-2">
-        <label class="container border-2 rounded border-white row-span-2" for="all-filter">
+    <button
+      type="button"
+      class="inline-flex h-full justify-center rounded-3xl rounded-bl-md bg-white p-3 text-sm font-medium text-gray-700 outline-none hover:bg-gray-50 focus:outline-none"
+      id="filter-button">
+      <img class="mr-2 h-4 w-4" src="/img/filter.svg" alt="expand menu">
+      <legend>Filter</legend>
+    </button>
+    <div id="filter-options" class="grid md:grid grid-rows-2 grid-cols-3 h-24 mt-2 items-stretch gap-2">
+        <label class="container rounded-md bg-white row-span-2" for="all-filter">
             All
-            <input type="radio" checked="checked" name="filter" value="" id="all-filter">
+            <input type="radio" checked name="filter" value="" id="all-filter">
             <span class="checkmark"></span>
         </label>
-        <label class="container border-2 rounded border-white" for="standard-filter">
+        <label class="container rounded-md bg-white col-span-2" for="standard-filter">
             Standard
             <input type="radio" value="false" name="filter" id="standard-filter">
             <span class="checkmark"></span>
         </label>
-        <label class="container border-2 rounded border-white" for="non-standard-filter">
+        <label class="container rounded-md bg-white col-span-2" for="non-standard-filter">
             Non Standard
             <input type="radio" value="true" name="filter" id="non-standard-filter">
             <span class="checkmark"></span>
         </label>
     </div>
 </fieldset>
+
+<script>
+  const filterButton = document.querySelector(
+      "#filter-button"
+  ) as HTMLButtonElement;
+  const filterOptions = document.querySelector(
+      "#filter-options"
+  ) as HTMLDivElement;
+
+  filterButton.addEventListener("click", (event) => {
+    filterOptions.classList.toggle("hidden");
+    filterOptions.classList.toggle("md:hidden");
+  });
+
+  const filterInput = document.querySelector("fieldset") as HTMLFieldSetElement;
+
+  const cardAttribute = document.querySelectorAll(".symbol-info") as NodeListOf<HTMLSpanElement>;
+
+  filterInput.addEventListener("input", (event) => {
+      const target = event.target as HTMLInputElement;
+      const isLegacy = target.value;
+      cardAttribute.forEach((element) => {
+          const isVisible = !isLegacy || element.textContent?.toString() == isLegacy;
+          element.parentElement!.classList.toggle("hidden", !isVisible);
+      });
+  });
+</script>
 
 <style>
     /* The container */
@@ -83,18 +116,3 @@
 	background: white;
 }
 </style>
-
-<script>
-    const filterInput = document.querySelector("fieldset") as HTMLFieldSetElement;
-
-    const cardAttribute = document.querySelectorAll(".symbol-info") as NodeListOf<HTMLSpanElement>;
-
-    filterInput.addEventListener("input", (event) => {
-        const target = event.target as HTMLInputElement;
-        const isLegacy = target.value;
-        cardAttribute.forEach((element) => {
-            const isVisible = !isLegacy || element.textContent?.toString() == isLegacy;
-            element.parentElement!.classList.toggle("hidden", !isVisible);
-        });
-    });
-</script>

@@ -292,6 +292,14 @@
       }
     },
     {
+      "title": "Iron at medium temperature, with a cloth",
+      "image": "/img/symbols/ironing/iron_medium_cloth.svg",
+      "category": "ironing",
+      "info": {
+        "legacy": true
+      }
+    },
+    {
       "title": "Iron at high temperature",
       "image": "/img/symbols/ironing/iron_high.svg",
       "category": "ironing"
@@ -305,9 +313,25 @@
       }
     },
     {
+      "title": "Iron at high temperature, with a cloth",
+      "image": "/img/symbols/ironing/iron_high_cloth.svg",
+      "category": "ironing",
+      "info": {
+        "legacy": true
+      }
+    },
+    {
       "title": "Do not iron",
       "image": "/img/symbols/ironing/iron_not.svg",
       "category": "ironing"
+    },
+    {
+      "title": "Do not steam",
+      "image": "/img/symbols/ironing/steam_not.svg",
+      "category": "ironing",
+      "info": {
+        "legacy": true
+      }
     },
     {
       "title": "Dry clean, hydrocarbon solvent only (HCS)",

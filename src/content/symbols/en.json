@@ -225,6 +225,14 @@
       }
     },
     {
+      "title": "Line Dry",
+      "image": "/img/symbols/drying/dry_line_3.svg",
+      "category": "drying",
+      "info": {
+        "legacy": true
+      }
+    },
+    {
       "title": "Drip dry",
       "image": "/img/symbols/drying/dry_drip.svg",
       "category": "drying"
@@ -233,6 +241,14 @@
       "title": "Dry in the shade",
       "image": "/img/symbols/drying/dry_shade.svg",
       "category": "drying"
+    },
+    {
+      "title": "Line dry in the shade",
+      "image": "/img/symbols/drying/dry_line_shade_3.svg",
+      "category": "drying",
+      "info": {
+        "legacy": true
+      }
     },
     {
       "title": "Line dry in the shade",
@@ -261,9 +277,49 @@
       }
     },
     {
+      "title": "Dry flat in shade",
+      "image": "/img/symbols/drying/dry_flat_shade_3.svg",
+      "category": "drying",
+      "info": {
+        "legacy": true
+      }
+    },
+    {
       "title": "Drip dry in shade",
       "image": "/img/symbols/drying/dry_drip_shade.svg",
       "category": "drying"
+    },
+    {
+      "title": "Drip dry in shade",
+      "image": "/img/symbols/drying/dry_drip_shade_2.svg",
+      "category": "drying",
+      "info": {
+        "legacy": true
+      }
+    },
+    {
+      "title": "Drip line drying in the shade",
+      "image": "/img/symbols/drying/dry_drip_line.svg",
+      "category": "drying",
+      "info": {
+        "legacy": true
+      }
+    },
+    {
+      "title": "Drip flat drying",
+      "image": "/img/symbols/drying/dry_drip_flat.svg",
+      "category": "drying",
+      "info": {
+        "legacy": true
+      }
+    },
+    {
+      "title": "Drip flat drying in the shade",
+      "image": "/img/symbols/drying/dry_drip_flat_shade.svg",
+      "category": "drying",
+      "info": {
+        "legacy": true
+      }
     },
     {
       "title": "Iron at low temperature",

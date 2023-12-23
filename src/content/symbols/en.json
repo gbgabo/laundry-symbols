@@ -84,6 +84,11 @@
       "category": "washing"
     },
     {
+      "title": "Mild fine wash at or below 50°C",
+      "image": "/img/symbols/washing/wash_50_mild.svg",
+      "category": "washing"
+    },
+    {
       "title": "Wash at or below 60°C",
       "image": "/img/symbols/washing/wash_60.svg",
       "category": "washing"
@@ -153,7 +158,10 @@
     {
       "title": "Bleaching with chlorine allowed (obsolete)",
       "image": "/img/symbols/bleaching/bleach_chlor.svg",
-      "category": "bleaching"
+      "category": "bleaching",
+      "info": {
+        "legacy": true
+      }
     },
     {
       "title": "Non-chlorine bleach when needed",
@@ -168,7 +176,10 @@
     {
       "title": "Do not bleach",
       "image": "/img/symbols/bleaching/bleach_not_2.svg",
-      "category": "bleaching"
+      "category": "bleaching",
+      "info": {
+        "legacy": true
+      }
     },
     {
       "title": "Do not bleach",
@@ -179,9 +190,12 @@
       }
     },
     {
-      "title": "Tumble drying",
+      "title": "Tumble drying (any temperature)",
       "image": "/img/symbols/drying/dry_tumble.svg",
-      "category": "drying"
+      "category": "drying",
+      "info": {
+        "legacy": true
+      }
     },
     {
       "title": "Tumble drying (low temperature)",
@@ -204,17 +218,19 @@
       "category": "drying"
     },
     {
+      "title": "Drip line drying",
+      "image": "/img/symbols/drying/dry_drip_line.svg",
+      "category": "drying"
+    },
+    {
       "title": "Dry flat",
       "image": "/img/symbols/drying/dry_flat.svg",
       "category": "drying"
     },
     {
-      "title": "Dry flat",
-      "image": "/img/symbols/drying/dry_flat_2.svg",
-      "category": "drying",
-      "info": {
-        "legacy": true
-      }
+      "title": "Drip flat drying",
+      "image": "/img/symbols/drying/dry_drip_flat.svg",
+      "category": "drying"
     },
     {
       "title": "Line Dry",
@@ -225,26 +241,16 @@
       }
     },
     {
-      "title": "Line Dry",
-      "image": "/img/symbols/drying/dry_line_3.svg",
+      "title": "Drip dry",
+      "image": "/img/symbols/drying/dry_drip.svg",
       "category": "drying",
       "info": {
         "legacy": true
       }
     },
     {
-      "title": "Drip dry",
-      "image": "/img/symbols/drying/dry_drip.svg",
-      "category": "drying"
-    },
-    {
       "title": "Dry in the shade",
       "image": "/img/symbols/drying/dry_shade.svg",
-      "category": "drying"
-    },
-    {
-      "title": "Line dry in the shade",
-      "image": "/img/symbols/drying/dry_line_shade_3.svg",
       "category": "drying",
       "info": {
         "legacy": true
@@ -264,29 +270,18 @@
       "category": "drying"
     },
     {
+      "title": "Drip dry in shade",
+      "image": "/img/symbols/drying/dry_drip_shade.svg",
+      "category": "drying"
+    },
+    {
       "title": "Dry flat in shade",
       "image": "/img/symbols/drying/dry_flat_shade.svg",
       "category": "drying"
     },
     {
-      "title": "Dry flat in shade",
-      "image": "/img/symbols/drying/dry_flat_shade_2.svg",
-      "category": "drying",
-      "info": {
-        "legacy": true
-      }
-    },
-    {
-      "title": "Dry flat in shade",
-      "image": "/img/symbols/drying/dry_flat_shade_3.svg",
-      "category": "drying",
-      "info": {
-        "legacy": true
-      }
-    },
-    {
-      "title": "Drip dry in shade",
-      "image": "/img/symbols/drying/dry_drip_shade.svg",
+      "title": "Drip flat drying in the shade",
+      "image": "/img/symbols/drying/dry_drip_flat_shade.svg",
       "category": "drying"
     },
     {
@@ -298,24 +293,40 @@
       }
     },
     {
-      "title": "Drip line drying in the shade",
-      "image": "/img/symbols/drying/dry_drip_line.svg",
+      "title": "Dry flat in shade",
+      "image": "/img/symbols/drying/dry_flat_shade_2.svg",
       "category": "drying",
       "info": {
         "legacy": true
       }
     },
     {
-      "title": "Drip flat drying",
-      "image": "/img/symbols/drying/dry_drip_flat.svg",
+      "title": "Dry flat",
+      "image": "/img/symbols/drying/dry_flat_2.svg",
       "category": "drying",
       "info": {
         "legacy": true
       }
     },
     {
-      "title": "Drip flat drying in the shade",
-      "image": "/img/symbols/drying/dry_drip_flat_shade.svg",
+      "title": "Line Dry",
+      "image": "/img/symbols/drying/dry_line_3.svg",
+      "category": "drying",
+      "info": {
+        "legacy": true
+      }
+    },
+    {
+      "title": "Line dry in the shade",
+      "image": "/img/symbols/drying/dry_line_shade_3.svg",
+      "category": "drying",
+      "info": {
+        "legacy": true
+      }
+    },
+    {
+      "title": "Dry flat in shade",
+      "image": "/img/symbols/drying/dry_flat_shade_3.svg",
       "category": "drying",
       "info": {
         "legacy": true
@@ -410,7 +421,10 @@
     {
       "title": "Very gentle cleaning with hydrocarbon solvents",
       "image": "/img/symbols/professional/pro_hcs_very_gentle.svg",
-      "category": "professional"
+      "category": "professional",
+      "info": {
+        "legacy": true
+      }
     },
     {
       "title": "Dry clean, tetrachloroethylene (PCE) only",
@@ -467,6 +481,14 @@
       "title": "Do not wet clean",
       "image": "/img/symbols/professional/pro_not_wet.svg",
       "category": "professional"
+    },
+    {
+      "title": "Do not wet clean",
+      "image": "/img/symbols/professional/pro_not_wet_2.svg",
+      "category": "professional",
+      "info": {
+        "legacy": true
+      }
     },
     {
       "title": "If wring, do it gently",

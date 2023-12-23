@@ -3,12 +3,16 @@ import Layout from "~/layouts/Layout.astro";
 import CategorySection from "~/components/CategorySection.astro";
 import SearchBar from "~/components/SearchBar.astro";
 
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
+import LanguagePicker from "~/components/LanguagePicker.astro";
 
 interface Symbol {
 	title: string;
 	image: string;
 	category: string;
+	info: {
+		legacy: boolean;
+	}
 }
 
 interface SymbolObjectByAttribute {
@@ -17,13 +21,27 @@ interface SymbolObjectByAttribute {
 
 export async function getStaticPaths() {
 	const symbolsCollection = await getCollection('symbols');
-	return symbolsCollection.map(entry => ({
-		params: { lang: entry.id }, 
-		props: { entry },
-	}));
+	const defaultPath = await getEntry('symbols', 'en');
+	
+	const paths = [
+		{
+			...defaultPath,
+			id: undefined,
+		},
+		...symbolsCollection
+	];
+	
+	return paths.map(entry => {
+		const { id } = entry;
+		return {
+			params: { lang: id }, 
+			props: { entry },
+		}
+	});
+
 }
 
-const { lang } = Astro.params;
+const { lang = 'en' } = Astro.params;
 const { entry } = Astro.props;
 const { title, description, symbols, categories, searchPrompt, footer } = entry.data;
 
@@ -42,21 +60,17 @@ const symbolsByCategory = symbols.reduce(
 // const symbolsByCategory = Object.groupBy(symbols, ({ category }) => category);
 ---
 
-<Layout title={title} description={description} footer={footer}>
-	<SearchBar
-		current={lang}
-		prompt={searchPrompt}
-		languages={[
-			{
-				slug: "en",
-				emoji: "🇺🇸",
-			},
-			{
-				slug: "pt-br",
-				emoji: "🇧🇷",
-			},
-		]}
-	/>
+<Layout title={title} description={description}>
+	<Fragment slot="top-bar">
+		<div class="grid grid-cols-12 gap-2">
+			<div class="col-span-9 md:col-span-10">
+				<SearchBar placeholder={searchPrompt}/>
+			</div>
+			<div class="col-span-3 md:col-span-2">
+				<LanguagePicker current={lang} languages={[ { slug: "en", emoji: "🇺🇸" }, { slug: "pt-br", emoji: "🇧🇷" }]}/>
+			</div>
+		</div>
+	</Fragment>
 	<main class="m-auto mb-20 max-w-3xl bg-cyan-50 p-3">
 		{
 			Object.keys(symbolsByCategory).map((category) => {
@@ -70,4 +84,5 @@ const symbolsByCategory = symbols.reduce(
 			})
 		}
 	</main>
+	<Fragment slot="footer" set:html={footer}/>
 </Layout>

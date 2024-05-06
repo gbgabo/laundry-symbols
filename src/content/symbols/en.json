@@ -48,6 +48,22 @@
       "category": "washing"
     },
     {
+      "title": "Wash at or below 30°C, can be washed in washing machine",
+      "image": "/img/symbols/washing/wash_30_mild_machine.svg",
+      "category": "washing",
+      "info": {
+        "legacy": true
+      }
+    },
+    {
+      "title": "Wash at or below 30°C, machine wash with neutral detergent ",
+      "image": "/img/symbols/washing/wash_30_mild_machine_neutral.svg",
+      "category": "washing",
+      "info": {
+        "legacy": true
+      }
+    },
+    {
       "title": "Wash at or below 40°C",
       "image": "/img/symbols/washing/wash_40.svg",
       "category": "washing"
@@ -71,8 +87,16 @@
       }
     },
     {
-      "title": "Wash at or below 40°C, can be washed in washing machine",
+      "title": "Gentle wash at or below 40°C, can be washed in washing machine",
       "image": "/img/symbols/washing/wash_40_mild_machine.svg",
+      "category": "washing",
+      "info": {
+        "legacy": true
+      }
+    },
+    {
+      "title": "Gentle wash at or below 40°C, machine wash inside a net",
+      "image": "/img/symbols/washing/wash_40_mild_machine_net.svg",
       "category": "washing",
       "info": {
         "legacy": true
@@ -125,8 +149,16 @@
       }
     },
     {
-      "title": "Wash at or below 30°C, can be washed by hand",
+      "title": "Wash at or below 30°C, washed by hand, do not machine wash",
       "image": "/img/symbols/washing/wash_30_hand.svg",
+      "category": "washing",
+      "info": {
+        "legacy": true
+      }
+    },
+    {
+      "title": "Wash at or below 30°C, washed by hand with neutral detergent",
+      "image": "/img/symbols/washing/wash_30_hand_neutral.svg",
       "category": "washing",
       "info": {
         "legacy": true
@@ -340,6 +372,14 @@
     {
       "title": "Iron at low temperature",
       "image": "/img/symbols/ironing/iron_low_2.svg",
+      "category": "ironing",
+      "info": {
+        "legacy": true
+      }
+    },
+    {
+      "title": "Iron at low temperature, with a cloth",
+      "image": "/img/symbols/ironing/iron_low_cloth.svg",
       "category": "ironing",
       "info": {
         "legacy": true

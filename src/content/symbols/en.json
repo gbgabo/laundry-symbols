@@ -38,6 +38,30 @@
       "category": "washing"
     },
     {
+      "title": "Wash cold",
+      "image": "/img/symbols/washing/wash_cold.svg",
+      "category": "washing",
+      "info": {
+        "legacy": true
+      }
+    },
+    {
+      "title": "Wash warm",
+      "image": "/img/symbols/washing/wash_warm.svg",
+      "category": "washing",
+      "info": {
+        "legacy": true
+      }
+    },
+    {
+      "title": "Wash hot",
+      "image": "/img/symbols/washing/wash_hot.svg",
+      "category": "washing",
+      "info": {
+        "legacy": true
+      }
+    },
+    {
       "title": "Mild fine wash at or below 30°C",
       "image": "/img/symbols/washing/wash_30_mild.svg",
       "category": "washing"
@@ -238,6 +262,14 @@
       "title": "Tumble drying (high temperature)",
       "image": "/img/symbols/drying/dry_tumble_high.svg",
       "category": "drying"
+    },
+    {
+      "title": "Tumble drying (any temperature)",
+      "image": "/img/symbols/drying/dry_tumble_high_heat.svg",
+      "category": "drying",
+      "info": {
+        "legacy": true
+      }
     },
     {
       "title": "Do not tumble dry",

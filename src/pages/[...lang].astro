@@ -10,6 +10,10 @@ import { getLangFromUrl, useTranslations } from "~/i18n/utils";
 const currentLang = getLangFromUrl(Astro.url);
 const t = useTranslations(currentLang);
 
+interface Category {
+  title: string;
+  image: string;
+}
 interface Symbol {
   title: string;
   image: string;
@@ -18,12 +22,13 @@ interface Symbol {
     legacy: boolean;
   };
 }
+interface CategoriesByAttribute {
+  [key: string]: Category;
+}
 
 interface SymbolObjectByAttribute {
   [key: string]: Symbol[];
 }
-const symbols = await getCollection("symbols");
-const categories = await getCollection("categories");
 
 export async function getStaticPaths() {
   const paths = [
@@ -46,9 +51,35 @@ export async function getStaticPaths() {
   });
 }
 
+const symbols = await getCollection("symbols");
+const categories = await getCollection("categories");
+
+const categoriesById = categories.reduce(
+  (symbolsObject: CategoriesByAttribute, category) => {
+    if (!symbolsObject[category.id]) {
+      symbolsObject[category.id] = category.data;
+    }
+    return symbolsObject;
+  },
+  {}
+);
+
+const symbolsByCategory = symbols.reduce(
+  (symbolsObject: SymbolObjectByAttribute, symbol) => {
+    if (symbolsObject[symbol.data.category]) {
+      symbolsObject[symbol.data.category].push(symbol.data);
+    } else {
+      symbolsObject[symbol.data.category] = [symbol.data];
+    }
+    return symbolsObject;
+  },
+  {}
+);
+
+//const symbolsByCategory = Object.groupBy(symbols, ({ data }) => data.category);
+//const categoriesById = Object.groupBy(categories, ({ id }) => id);
+
 const { lang = "en" } = Astro.params;
-const symbolsByCategory = Object.groupBy(symbols, ({ data }) => data.category);
-const categoriesById = Object.groupBy(categories, ({ id }) => id);
 ---
 
 <Layout title={t("nav.title")} description={t("nav.description")}>
@@ -69,48 +100,16 @@ const categoriesById = Object.groupBy(categories, ({ id }) => id);
     </div>
   </Fragment>
   <main class="m-auto mb-20 max-w-3xl bg-cyan-50 p-3">
-    <CategorySection
-      symbols={symbolsByCategory["washing"]}
-      category={{
-        title: categoriesById["washing"][0].data.title,
-        icon: categoriesById["washing"][0].data.image,
-      }}
-    />
-    <CategorySection
-      symbols={symbolsByCategory["bleaching"]}
-      category={{
-        title: categoriesById["bleaching"][0].data.title,
-        icon: categoriesById["bleaching"][0].data.image,
-      }}
-    />
-    <CategorySection
-      symbols={symbolsByCategory["drying"]}
-      category={{
-        title: categoriesById["drying"][0].data.title,
-        icon: categoriesById["drying"][0].data.image,
-      }}
-    />
-    <CategorySection
-      symbols={symbolsByCategory["ironing"]}
-      category={{
-        title: categoriesById["ironing"][0].data.title,
-        icon: categoriesById["ironing"][0].data.image,
-      }}
-    />
-    <CategorySection
-      symbols={symbolsByCategory["professional"]}
-      category={{
-        title: categoriesById["professional"][0].data.title,
-        icon: categoriesById["professional"][0].data.image,
-      }}
-    />
-    <CategorySection
-      symbols={symbolsByCategory["wringing"]}
-      category={{
-        title: categoriesById["wringing"][0].data.title,
-        icon: categoriesById["wringing"][0].data.image,
-      }}
-    />
+    {
+      Object.keys(categoriesById).map((category) => {
+        return (
+          <CategorySection
+            symbols={symbolsByCategory[category]}
+            category={{ ...categoriesById[category] }}
+          />
+        );
+      })
+    }
   </main>
   <Fragment slot="footer" set:html={t("nav.footer")} />
 </Layout>

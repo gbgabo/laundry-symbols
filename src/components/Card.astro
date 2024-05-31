@@ -1,19 +1,17 @@
 ---
 export interface Props {
   symbol: {
-    data: {
-      title: string;
-      image: string;
-      category: string;
-      info?: {
-        legacy: boolean;
-      };
+    title: string;
+    image: string;
+    category: string;
+    info?: {
+      legacy: boolean;
     };
   };
 }
 
 const { symbol } = Astro.props;
-const { title, image, info } = symbol.data;
+const { title, image, info } = symbol;
 ---
 
 <li class="flex flex-col align-center items-center rounded bg-white p-4 shadow">

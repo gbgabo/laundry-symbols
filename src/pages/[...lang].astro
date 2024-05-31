@@ -2,87 +2,115 @@
 import Layout from "~/layouts/Layout.astro";
 import CategorySection from "~/components/CategorySection.astro";
 import SearchBar from "~/components/SearchBar.astro";
-
-import { getCollection, getEntry } from 'astro:content';
 import LanguagePicker from "~/components/LanguagePicker.astro";
 
+import { getCollection } from "astro:content";
+import { getLangFromUrl, useTranslations } from "~/i18n/utils";
+
+const currentLang = getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+
 interface Symbol {
-	title: string;
-	image: string;
-	category: string;
-	info: {
-		legacy: boolean;
-	}
+  title: string;
+  image: string;
+  category: string;
+  info: {
+    legacy: boolean;
+  };
 }
 
 interface SymbolObjectByAttribute {
-	[key: string]: Symbol[];
+  [key: string]: Symbol[];
 }
+const symbols = await getCollection("symbols");
+const categories = await getCollection("categories");
 
 export async function getStaticPaths() {
-	const symbolsCollection = await getCollection('symbols');
-	const defaultPath = await getEntry('symbols', 'en');
-	
-	const paths = [
-		{
-			...defaultPath,
-			id: undefined,
-		},
-		...symbolsCollection
-	];
-	
-	return paths.map(entry => {
-		const { id } = entry;
-		return {
-			params: { lang: id }, 
-			props: { entry },
-		}
-	});
+  const paths = [
+    {
+      lang: undefined,
+    },
+    {
+      lang: "en",
+    },
+    {
+      lang: "pt-br",
+    },
+  ];
 
+  return paths.map((entry) => {
+    const { lang } = entry;
+    return {
+      params: { lang },
+    };
+  });
 }
 
-const { lang = 'en' } = Astro.params;
-const { entry } = Astro.props;
-const { title, description, symbols, categories, searchPrompt, footer } = entry.data;
-
-const symbolsByCategory = symbols.reduce(
-	(symbolsObject: SymbolObjectByAttribute, symbol) => {
-		if (symbolsObject[symbol.category]) {
-			symbolsObject[symbol.category].push(symbol);
-		} else {
-			symbolsObject[symbol.category] = [symbol];
-		}
-		return symbolsObject;
-	},
-	{}
-);
-
-// const symbolsByCategory = Object.groupBy(symbols, ({ category }) => category);
+const { lang = "en" } = Astro.params;
+const symbolsByCategory = Object.groupBy(symbols, ({ data }) => data.category);
+const categoriesById = Object.groupBy(categories, ({ id }) => id);
 ---
 
-<Layout title={title} description={description}>
-	<Fragment slot="top-bar">
-		<div class="grid grid-cols-12 gap-2">
-			<div class="col-span-9 md:col-span-10">
-				<SearchBar placeholder={searchPrompt}/>
-			</div>
-			<div class="col-span-3 md:col-span-2">
-				<LanguagePicker current={lang} languages={[ { slug: "en", emoji: "🇺🇸" }, { slug: "pt-br", emoji: "🇧🇷" }]}/>
-			</div>
-		</div>
-	</Fragment>
-	<main class="m-auto mb-20 max-w-3xl bg-cyan-50 p-3">
-		{
-			Object.keys(symbolsByCategory).map((category) => {
-				return (
-					<CategorySection
-						symbols={symbolsByCategory[category]}
-						title={categories[category].name}
-						icon={categories[category].imageUrl}
-					/>
-				);
-			})
-		}
-	</main>
-	<Fragment slot="footer" set:html={footer}/>
+<Layout title={t("nav.title")} description={t("nav.description")}>
+  <Fragment slot="top-bar">
+    <div class="grid grid-cols-12 gap-2">
+      <div class="col-span-9 md:col-span-10">
+        <SearchBar placeholder={t("nav.search")} />
+      </div>
+      <div class="col-span-3 md:col-span-2">
+        <LanguagePicker
+          current={lang}
+          languages={[
+            { slug: "en", emoji: "🇺🇸" },
+            { slug: "pt-br", emoji: "🇧🇷" },
+          ]}
+        />
+      </div>
+    </div>
+  </Fragment>
+  <main class="m-auto mb-20 max-w-3xl bg-cyan-50 p-3">
+    <CategorySection
+      symbols={symbolsByCategory["washing"]}
+      category={{
+        title: categoriesById["washing"][0].data.title,
+        icon: categoriesById["washing"][0].data.image,
+      }}
+    />
+    <CategorySection
+      symbols={symbolsByCategory["bleaching"]}
+      category={{
+        title: categoriesById["bleaching"][0].data.title,
+        icon: categoriesById["bleaching"][0].data.image,
+      }}
+    />
+    <CategorySection
+      symbols={symbolsByCategory["drying"]}
+      category={{
+        title: categoriesById["drying"][0].data.title,
+        icon: categoriesById["drying"][0].data.image,
+      }}
+    />
+    <CategorySection
+      symbols={symbolsByCategory["ironing"]}
+      category={{
+        title: categoriesById["ironing"][0].data.title,
+        icon: categoriesById["ironing"][0].data.image,
+      }}
+    />
+    <CategorySection
+      symbols={symbolsByCategory["professional"]}
+      category={{
+        title: categoriesById["professional"][0].data.title,
+        icon: categoriesById["professional"][0].data.image,
+      }}
+    />
+    <CategorySection
+      symbols={symbolsByCategory["wringing"]}
+      category={{
+        title: categoriesById["wringing"][0].data.title,
+        icon: categoriesById["wringing"][0].data.image,
+      }}
+    />
+  </main>
+  <Fragment slot="footer" set:html={t("nav.footer")} />
 </Layout>

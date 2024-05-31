@@ -9,35 +9,28 @@ const categoryKey = z.enum([
   "wringing",
 ]);
 
-const symbol = z.object({
-  title: z.string(),
-  image: z.string(),
-  category: categoryKey,
-  info: z.object({
-      legacy: z.boolean(),
-    })
-    .default({
-      legacy: false
-    })
+const categoryCollection = defineCollection({
+  type: "data",
+  schema: z.object({
+    title: z.string(),
+    image: z.string(),
+  }),
 });
 
 const symbolCollection = defineCollection({
   type: "data",
   schema: z.object({
-    lang: z.string(),
-    emoji: z.string(),
     title: z.string(),
-    description: z.string(),
-    footer: z.string(),
-    searchPrompt: z.string(),
-    categories: z.record(
-      categoryKey,
-      z.object({
-        name: z.string(),
-        imageUrl: z.string(),
+    image: z.string(),
+    category: categoryKey,
+    variation: z.string().optional(),
+    info: z
+      .object({
+        legacy: z.boolean(),
       })
-    ),
-    symbols: z.array(symbol),
+      .default({
+        legacy: false,
+      }),
   }),
 });
 

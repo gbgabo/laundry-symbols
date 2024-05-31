@@ -1,0 +1,8 @@
+{
+  "title": "Wash cold",
+  "image": "/img/symbols/washing/wash_cold.svg",
+  "category": "washing",
+  "info": {
+    "legacy": true
+  }
+}

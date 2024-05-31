@@ -1,0 +1,8 @@
+{
+  "title": "Wash at or below 60°C, can be washed in washing machine",
+  "image": "/img/symbols/washing/wash_60_machine.svg",
+  "category": "washing",
+  "info": {
+    "legacy": true
+  }
+}

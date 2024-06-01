@@ -76,6 +76,14 @@ const symbolsByCategory = symbols.reduce(
   {}
 );
 
+const categoryOrder = [
+  "washing",
+  "bleaching",
+  "drying",
+  "ironing",
+  "professional",
+  "wringing",
+];
 //const symbolsByCategory = Object.groupBy(symbols, ({ data }) => data.category);
 //const categoriesById = Object.groupBy(categories, ({ id }) => id);
 
@@ -101,7 +109,7 @@ const { lang = "en" } = Astro.params;
   </Fragment>
   <main class="m-auto mb-20 max-w-3xl bg-cyan-50 p-3">
     {
-      Object.keys(categoriesById).map((category) => {
+      categoryOrder.map((category) => {
         return (
           <CategorySection
             symbols={symbolsByCategory[category]}

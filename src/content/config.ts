@@ -12,7 +12,10 @@ const categoryKey = z.enum([
 const categoryCollection = defineCollection({
   type: "data",
   schema: z.object({
-    title: z.string(),
+    title: z.object({
+      en: z.string(),
+      "pt-br": z.string().optional(),
+    }),
     image: z.string(),
   }),
 });
@@ -39,4 +42,5 @@ const symbolCollection = defineCollection({
 
 export const collections = {
   symbols: symbolCollection,
+  categories: categoryCollection,
 };

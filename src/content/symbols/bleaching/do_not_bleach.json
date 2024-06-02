@@ -1,8 +1,5 @@
 {
   "title": { "en": "Do not bleach" },
   "image": "/img/symbols/bleaching/bleach_not.svg",
-  "category": "bleaching",
-  "info": {
-    "legacy": true
-  }
+  "category": "bleaching"
 }

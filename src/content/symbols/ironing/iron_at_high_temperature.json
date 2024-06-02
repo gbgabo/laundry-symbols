@@ -1,8 +1,5 @@
 {
   "title": { "en": "Iron at high temperature" },
   "image": "/img/symbols/ironing/iron_high.svg",
-  "category": "ironing",
-  "info": {
-    "legacy": true
-  }
+  "category": "ironing"
 }

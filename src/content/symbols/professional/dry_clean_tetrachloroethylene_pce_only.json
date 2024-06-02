@@ -4,8 +4,5 @@
     "pt-br": "Limpeza a seco, apenas com tetrachloroetileno (PCE)"
   },
   "image": "/img/symbols/professional/pro_pce.svg",
-  "category": "professional",
-  "info": {
-    "legacy": true
-  }
+  "category": "professional"
 }

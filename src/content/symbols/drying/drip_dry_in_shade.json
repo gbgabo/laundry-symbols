@@ -1,8 +1,5 @@
 {
   "title": { "en": "Drip dry in shade" },
   "image": "/img/symbols/drying/dry_drip_shade.svg",
-  "category": "drying",
-  "info": {
-    "legacy": true
-  }
+  "category": "drying"
 }

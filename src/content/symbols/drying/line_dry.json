@@ -1,8 +1,5 @@
 {
   "title": { "en": "Line Dry" },
   "image": "/img/symbols/drying/dry_line_3.svg",
-  "category": "drying",
-  "info": {
-    "legacy": true
-  }
+  "category": "drying"
 }

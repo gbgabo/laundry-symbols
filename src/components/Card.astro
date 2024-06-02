@@ -1,7 +1,9 @@
 ---
 export interface Props {
   symbol: {
-    title: string;
+    title: {
+      en: string;
+    };
     image: string;
     category: string;
     info?: {
@@ -15,9 +17,9 @@ const { title, image, info } = symbol;
 ---
 
 <li class="flex flex-col align-center items-center rounded bg-white p-4 shadow">
-  <img width="206" height="206" class="p-3" src={image} alt={title} />
+  <img width="206" height="206" class="p-3" src={image} alt={title.en} />
   <p class="symbol-title break-words text-center">
-    {title}
+    {title.en}
   </p>
   <span class="hidden symbol-info">{info && info.legacy.toString()}</span>
 </li>

@@ -1,5 +1,5 @@
 {
-  "title": "Do not chemical clean",
+  "title": { "en": "Do not chemical clean" },
   "image": "/img/symbols/professional/pro_not_chem_2.svg",
   "category": "professional",
   "info": {

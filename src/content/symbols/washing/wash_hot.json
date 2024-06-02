@@ -1,5 +1,5 @@
 {
-  "title": "Wash hot",
+  "title": { "en": "Wash hot" },
   "image": "/img/symbols/washing/wash_hot.svg",
   "category": "washing",
   "info": {

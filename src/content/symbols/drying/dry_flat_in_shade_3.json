@@ -1,5 +1,5 @@
 {
-  "title": "Dry flat in shade",
+  "title": { "en": "Dry flat in shade" },
   "image": "/img/symbols/drying/dry_flat_shade_3.svg",
   "category": "drying",
   "info": {

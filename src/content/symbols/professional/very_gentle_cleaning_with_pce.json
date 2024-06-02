@@ -1,5 +1,5 @@
 {
-  "title": "Very gentle cleaning with PCE",
+  "title": { "en": "Very gentle cleaning with PCE" },
   "image": "/img/symbols/professional/pro_pce_very_gentle.svg",
   "category": "professional"
 }

@@ -2,7 +2,9 @@
 import Card from "~/components/Card.astro";
 
 interface Symbol {
-  title: string;
+  title: {
+    en: string;
+  };
   image: string;
   category: string;
   info: {
@@ -12,7 +14,9 @@ interface Symbol {
 
 export interface Props {
   category: {
-    title: string;
+    title: {
+      en: string;
+    };
     image: string;
   };
   symbols: Symbol[];
@@ -33,9 +37,9 @@ const { image, title } = category;
         height="48"
         src={image}
         class="mr-2 w-9"
-        alt={`${title} symbol`}
+        alt={`${title.en} symbol`}
       />
-      <h1 class="font-medium md:text-lg tracking-wide">{title}</h1>
+      <h1 class="font-medium md:text-lg tracking-wide">{title.en}</h1>
     </a>
   </div>
   <ul role="list" class="grid grid-cols-2 gap-4 sm:grid-cols-3">

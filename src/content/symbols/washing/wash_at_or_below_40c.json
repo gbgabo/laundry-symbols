@@ -1,5 +1,5 @@
 {
-  "title": "Wash at or below 40°C",
+  "title": { "en": "Wash at or below 40°C" },
   "image": "/img/symbols/washing/wash_40.svg",
   "category": "washing"
 }

@@ -1,5 +1,7 @@
 {
-  "title": "Wash at or below 30°C, washed by hand with neutral detergent",
+  "title": {
+    "en": "Wash at or below 30°C, washed by hand with neutral detergent"
+  },
   "image": "/img/symbols/washing/wash_30_hand_neutral.svg",
   "category": "washing",
   "info": {

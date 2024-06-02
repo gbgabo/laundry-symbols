@@ -1,5 +1,5 @@
 {
-  "title": "If wring, do it gently",
+  "title": { "en": "If wring, do it gently" },
   "image": "/img/symbols/wringing/wring_gently.svg",
   "category": "wringing",
   "info": {

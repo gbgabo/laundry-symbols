@@ -1,5 +1,5 @@
 {
-  "title": "Do not steam",
+  "title": { "en": "Do not steam" },
   "image": "/img/symbols/ironing/steam_not.svg",
   "category": "ironing",
   "info": {

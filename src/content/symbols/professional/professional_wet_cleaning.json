@@ -1,5 +1,5 @@
 {
-  "title": "Professional wet cleaning",
+  "title": { "en": "Professional wet cleaning" },
   "image": "/img/symbols/professional/pro_wet.svg",
   "category": "professional"
 }

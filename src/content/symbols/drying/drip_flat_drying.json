@@ -1,5 +1,5 @@
 {
-  "title": "Drip flat drying",
+  "title": { "en": "Drip flat drying" },
   "image": "/img/symbols/drying/dry_drip_flat.svg",
   "category": "drying"
 }

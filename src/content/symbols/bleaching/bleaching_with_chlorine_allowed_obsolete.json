@@ -1,5 +1,5 @@
 {
-  "title": "Bleaching with chlorine allowed (obsolete)",
+  "title": { "en": "Bleaching with chlorine allowed (obsolete)" },
   "image": "/img/symbols/bleaching/bleach_chlor.svg",
   "category": "bleaching",
   "info": {

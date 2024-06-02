@@ -1,5 +1,5 @@
 {
-  "title": "Dry clean, hydrocarbon solvent only (HCS)",
+  "title": { "en": "Dry clean, hydrocarbon solvent only (HCS)" },
   "image": "/img/symbols/professional/pro_hcs_2.svg",
   "category": "professional",
   "info": {

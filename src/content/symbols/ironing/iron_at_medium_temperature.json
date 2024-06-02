@@ -1,5 +1,5 @@
 {
-  "title": "Iron at medium temperature",
+  "title": { "en": "Iron at medium temperature" },
   "image": "/img/symbols/ironing/iron_medium.svg",
   "category": "ironing",
   "info": {

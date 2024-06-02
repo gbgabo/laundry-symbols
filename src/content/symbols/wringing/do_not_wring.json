@@ -1,5 +1,5 @@
 {
-  "title": "Do not wring",
+  "title": { "en": "Do not wring" },
   "image": "/img/symbols/wringing/wring_not.svg",
   "category": "wringing",
   "info": {

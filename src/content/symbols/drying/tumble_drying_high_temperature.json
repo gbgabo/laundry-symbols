@@ -1,5 +1,5 @@
 {
-  "title": "Tumble drying (high temperature)",
+  "title": { "en": "Tumble drying (high temperature)" },
   "image": "/img/symbols/drying/dry_tumble_high.svg",
   "category": "drying"
 }

@@ -1,5 +1,5 @@
 {
-  "title": "Line drying",
+  "title": { "en": "Line drying" },
   "image": "/img/symbols/drying/dry_line.svg",
   "category": "drying"
 }

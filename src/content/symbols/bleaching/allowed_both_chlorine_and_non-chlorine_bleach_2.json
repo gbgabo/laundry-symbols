@@ -1,5 +1,5 @@
 {
-  "title": "Allowed both chlorine and non-chlorine bleach",
+  "title": { "en": "Allowed both chlorine and non-chlorine bleach" },
   "image": "/img/symbols/bleaching/bleach_2.svg",
   "category": "bleaching",
   "info": {

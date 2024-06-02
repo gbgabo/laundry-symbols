@@ -1,5 +1,5 @@
 {
-  "title": "Do not wet clean",
+  "title": { "en": "Do not wet clean" },
   "image": "/img/symbols/professional/pro_not_wet.svg",
   "category": "professional",
   "info": {

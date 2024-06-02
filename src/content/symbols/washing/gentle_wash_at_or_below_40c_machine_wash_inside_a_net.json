@@ -1,5 +1,5 @@
 {
-  "title": "Gentle wash at or below 40°C, machine wash inside a net",
+  "title": { "en": "Gentle wash at or below 40°C, machine wash inside a net" },
   "image": "/img/symbols/washing/wash_40_mild_machine_net.svg",
   "category": "washing",
   "info": {

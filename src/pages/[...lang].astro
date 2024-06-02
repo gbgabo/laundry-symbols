@@ -4,79 +4,20 @@ import CategorySection from "~/components/CategorySection.astro";
 import SearchBar from "~/components/SearchBar.astro";
 import LanguagePicker from "~/components/LanguagePicker.astro";
 
-import { getCollection } from "astro:content";
 import { getLangFromUrl, useTranslations } from "~/i18n/utils";
+import { fetchSymbols, fetchCategories } from "~/utils/symbols";
 
 const currentLang = getLangFromUrl(Astro.url);
 const t = useTranslations(currentLang);
 
-interface Category {
-  title: string;
-  image: string;
-}
-interface Symbol {
-  title: {
-    en: string;
-  };
-  image: string;
-  category: string;
-  info: {
-    legacy: boolean;
-  };
-}
-interface CategoriesByAttribute {
-  [key: string]: Category;
-}
-
-interface SymbolObjectByAttribute {
-  [key: string]: Symbol[];
-}
-
 export async function getStaticPaths() {
-  const paths = [
-    {
-      lang: undefined,
-    },
-    {
-      lang: "en",
-    },
-    {
-      lang: "pt-br",
-    },
-  ];
-
-  return paths.map((entry) => {
-    const { lang } = entry;
+  const paths = [undefined, "en", "pt-br"];
+  return paths.map((lang) => {
     return {
       params: { lang },
     };
   });
 }
-
-const symbols = await getCollection("symbols");
-const categories = await getCollection("categories");
-
-const categoriesById = categories.reduce(
-  (symbolsObject: CategoriesByAttribute, category) => {
-    if (!symbolsObject[category.id]) {
-      symbolsObject[category.id] = category.data;
-    }
-    return symbolsObject;
-  },
-  {}
-);
-
-const symbolsByCategory = symbols.reduce(
-  (symbolsObject: SymbolObjectByAttribute, symbol) => {
-    if (symbolsObject[symbol.data.category]) {
-      symbolsObject[symbol.data.category].push(symbol.data);
-    } else {
-      symbolsObject[symbol.data.category] = [symbol.data];
-    }
-    return symbolsObject;
-  },
-  {}
-);
 
 const categoryOrder = [
   "washing",
@@ -86,9 +27,9 @@ const categoryOrder = [
   "professional",
   "wringing",
 ];
-//const symbolsByCategory = Object.groupBy(symbols, ({ data }) => data.category);
-//const categoriesById = Object.groupBy(categories, ({ id }) => id);
 
+const symbols = fetchSymbols();
+const categories = fetchCategories();
 const { lang = "en" } = Astro.params;
 ---
 
@@ -114,8 +55,8 @@ const { lang = "en" } = Astro.params;
       categoryOrder.map((category) => {
         return (
           <CategorySection
-            symbols={symbolsByCategory[category]}
-            category={{ ...categoriesById[category] }}
+            symbols={symbols[category]}
+            category={{ ...categories[category] }}
           />
         );
       })

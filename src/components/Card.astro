@@ -1,15 +1,7 @@
 ---
+import type { Symbol } from "~/types";
 export interface Props {
-  symbol: {
-    title: {
-      en: string;
-    };
-    image: string;
-    category: string;
-    info?: {
-      legacy: boolean;
-    };
-  };
+  symbol: Symbol;
 }
 
 const { symbol } = Astro.props;
@@ -17,9 +9,9 @@ const { title, image, info } = symbol;
 ---
 
 <li class="flex flex-col align-center items-center rounded bg-white p-4 shadow">
-  <img width="206" height="206" class="p-3" src={image} alt={title.en} />
+  <img width="206" height="206" class="p-3" src={image} alt={title} />
   <p class="symbol-title break-words text-center">
-    {title.en}
+    {title}
   </p>
   <span class="hidden symbol-info">{info && info.legacy.toString()}</span>
 </li>

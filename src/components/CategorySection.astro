@@ -1,24 +1,9 @@
 ---
+import type { Symbol, Category } from "~/types";
 import Card from "~/components/Card.astro";
 
-interface Symbol {
-  title: {
-    en: string;
-  };
-  image: string;
-  category: string;
-  info: {
-    legacy: boolean;
-  };
-}
-
 export interface Props {
-  category: {
-    title: {
-      en: string;
-    };
-    image: string;
-  };
+  category: Category;
   symbols: Symbol[];
 }
 
@@ -37,9 +22,9 @@ const { image, title } = category;
         height="48"
         src={image}
         class="mr-2 w-9"
-        alt={`${title.en} symbol`}
+        alt={`${title} symbol`}
       />
-      <h1 class="font-medium md:text-lg tracking-wide">{title.en}</h1>
+      <h1 class="font-medium md:text-lg tracking-wide">{title}</h1>
     </a>
   </div>
   <ul role="list" class="grid grid-cols-2 gap-4 sm:grid-cols-3">

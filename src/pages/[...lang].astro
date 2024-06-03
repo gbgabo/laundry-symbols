@@ -19,15 +19,6 @@ export async function getStaticPaths() {
   });
 }
 
-const categoryOrder = [
-  "washing",
-  "bleaching",
-  "drying",
-  "ironing",
-  "professional",
-  "wringing",
-];
-
 const symbols = fetchSymbols();
 const categories = fetchCategories();
 const { lang = "en" } = Astro.params;
@@ -52,7 +43,7 @@ const { lang = "en" } = Astro.params;
   </Fragment>
   <main class="m-auto mb-20 max-w-3xl bg-cyan-50 p-3">
     {
-      categoryOrder.map((category) => {
+      Object.keys(symbols).map((category) => {
         return (
           <CategorySection
             symbols={symbols[category]}

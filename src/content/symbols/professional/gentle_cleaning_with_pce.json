@@ -1,5 +1,8 @@
 {
-  "title": { "en": "Gentle cleaning with PCE" },
+  "title": {
+    "en": "Gentle cleaning with PCE",
+    "pt-br": "Limpeza suave com tetracloroetileno (PCE)"
+  },
   "image": "/img/symbols/professional/pro_pce_gentle.svg",
   "category": "professional"
 }

@@ -1,5 +1,8 @@
 {
-  "title": { "en": "Gentle cleaning with hydrocarbon solvents" },
+  "title": {
+    "en": "Gentle cleaning with hydrocarbon solvents",
+    "pt-br": "Limpeza delicada com solventes de hidrocarboneto"
+  },
   "image": "/img/symbols/professional/pro_hcs_gentle.svg",
   "category": "professional"
 }

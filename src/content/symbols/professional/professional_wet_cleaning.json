@@ -1,5 +1,8 @@
 {
-  "title": { "en": "Professional wet cleaning" },
+  "title": {
+    "en": "Professional wet cleaning",
+    "pt-br": "Limpeza úmida profissional"
+  },
   "image": "/img/symbols/professional/pro_wet.svg",
   "category": "professional"
 }

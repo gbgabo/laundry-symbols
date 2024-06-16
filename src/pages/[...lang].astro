@@ -19,9 +19,9 @@ export async function getStaticPaths() {
   });
 }
 
-const symbols = fetchSymbols();
-const categories = fetchCategories();
 const { lang = "en" } = Astro.params;
+const symbols = fetchSymbols(lang);
+const categories = fetchCategories(lang);
 ---
 
 <Layout title={t("nav.title")} description={t("nav.description")}>

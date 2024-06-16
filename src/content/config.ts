@@ -23,10 +23,7 @@ const categoryCollection = defineCollection({
 const symbolCollection = defineCollection({
   type: "data",
   schema: z.object({
-    title: z.object({
-      en: z.string(),
-      "pt-br": z.string().optional(),
-    }),
+    title: z.record(z.union([z.literal("en"), z.literal("pt-br")]), z.string()),
     image: z.string(),
     category: categoryKey,
     variation: z.string().optional(),

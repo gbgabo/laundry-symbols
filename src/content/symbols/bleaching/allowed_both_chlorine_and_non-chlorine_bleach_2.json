@@ -1,5 +1,8 @@
 {
-  "title": { "en": "Allowed both chlorine and non-chlorine bleach" },
+  "title": {
+    "en": "Allowed both chlorine and non-chlorine bleach",
+    "pt-br": "Permitido tanto alvejante com cloro quanto sem cloro"
+  },
   "image": "/img/symbols/bleaching/bleach_2.svg",
   "category": "bleaching",
   "info": {

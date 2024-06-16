@@ -1,5 +1,8 @@
 {
-  "title": { "en": "Iron at medium temperature, with a cloth" },
+  "title": {
+    "en": "Iron at medium temperature, with a cloth",
+    "pt-br": "Passar a ferro em temperatura média, com um pano"
+  },
   "image": "/img/symbols/ironing/iron_medium_cloth.svg",
   "category": "ironing",
   "info": {

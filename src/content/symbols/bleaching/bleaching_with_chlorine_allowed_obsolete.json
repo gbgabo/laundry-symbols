@@ -1,5 +1,8 @@
 {
-  "title": { "en": "Bleaching with chlorine allowed (obsolete)" },
+  "title": {
+    "en": "Bleaching with chlorine allowed (obsolete)",
+    "pt-br": "Permitido alvejante com cloro (obsoleto)"
+  },
   "image": "/img/symbols/bleaching/bleach_chlor.svg",
   "category": "bleaching",
   "info": {

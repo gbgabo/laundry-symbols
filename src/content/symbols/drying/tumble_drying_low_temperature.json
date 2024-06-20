@@ -1,5 +1,8 @@
 {
-  "title": { "en": "Tumble drying (low temperature)" },
+  "title": {
+    "en": "Tumble drying (low temperature)",
+    "pt-br": "Secagem em máquina (baixa temperatura)"
+  },
   "image": "/img/symbols/drying/dry_tumble_low.svg",
   "category": "drying"
 }

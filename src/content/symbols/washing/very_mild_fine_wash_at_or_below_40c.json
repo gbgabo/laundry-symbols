@@ -1,5 +1,8 @@
 {
-  "title": { "en": "Very mild fine wash at or below 40°C" },
+  "title": {
+    "en": "Very mild fine wash at or below 40°C",
+    "pt-br": "Lavagem fina muito suave a 40°C ou menos"
+  },
   "image": "/img/symbols/washing/wash_40_very_mild.svg",
   "category": "washing"
 }

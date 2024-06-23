@@ -1,5 +1,8 @@
 {
-  "title": { "en": "Mild fine wash at or below 50°C" },
+  "title": {
+    "en": "Mild fine wash at or below 50°C",
+    "pt-br": "Lavar roupas delicadas a até 50°C"
+  },
   "image": "/img/symbols/washing/wash_50_mild.svg",
   "category": "washing"
 }

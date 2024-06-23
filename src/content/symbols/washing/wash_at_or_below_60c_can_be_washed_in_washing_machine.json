@@ -1,5 +1,8 @@
 {
-  "title": { "en": "Wash at or below 60°C, can be washed in washing machine" },
+  "title": {
+    "en": "Wash at or below 60°C, can be washed in washing machine",
+    "pt-br": "Lavar a 60°C ou abaixo, pode ser lavado na máquina de lavar"
+  },
   "image": "/img/symbols/washing/wash_60_machine.svg",
   "category": "washing",
   "info": {

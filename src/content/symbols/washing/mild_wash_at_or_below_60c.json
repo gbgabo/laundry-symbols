@@ -1,5 +1,8 @@
 {
-  "title": { "en": "Mild wash at or below 60°C" },
+  "title": {
+    "en": "Mild wash at or below 60°C",
+    "pt-br": "Lavagem suave a 60°C ou abaixo"
+  },
   "image": "/img/symbols/washing/wash_60_mild.svg",
   "category": "washing"
 }

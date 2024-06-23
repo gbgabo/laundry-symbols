@@ -36,8 +36,8 @@ export const ui = {
     "filter.standard": "Padrão",
     "filter.nonstandard": "Não Padrão",
     "filter.standard.description":
-      "The symbols based on GINETEX® international association for textile care labelling, adopted by most of the world",
+      "Os símbolos baseados na associação internacional GINETEX® para rotulagem de cuidados têxteis, adotada pela maior parte do mundo",
     "filter.nonstandard.description":
-      "Care symbols from specific countries, or legacy standards not produced anymore",
+      "Símbolos de lavagem de países específicos ou padrões legados que não são mais produzidos",
   },
 } as const;

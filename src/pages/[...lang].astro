@@ -4,24 +4,30 @@ import CategorySection from "~/components/CategorySection.astro";
 import SearchBar from "~/components/SearchBar.astro";
 import LanguagePicker from "~/components/LanguagePicker.astro";
 
+import { languages, type Lang } from "~/i18n/ui";
 import { getLangFromUrl, useTranslations } from "~/i18n/utils";
 import { fetchSymbols, fetchCategories } from "~/utils/symbols";
 
-const currentLang = getLangFromUrl(Astro.url);
-const t = useTranslations(currentLang);
-
 export async function getStaticPaths() {
-  const paths = [undefined, "en", "pt-br"];
+  const paths: Lang[] = [
+    undefined,
+    ...(Object.keys(languages) as Array<keyof typeof languages>),
+  ];
   return paths.map((lang) => {
     return {
       params: { lang },
+      props: {
+        symbols: fetchSymbols(lang),
+        categories: fetchCategories(lang),
+      },
     };
   });
 }
 
-const { lang = "en" } = Astro.params;
-const symbols = fetchSymbols(lang);
-const categories = fetchCategories(lang);
+const currentLang = getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
+
+const { symbols, categories } = Astro.props;
 ---
 
 <Layout title={t("nav.title")} description={t("nav.description")}>
@@ -31,13 +37,7 @@ const categories = fetchCategories(lang);
         <SearchBar placeholder={t("nav.search")} />
       </div>
       <div class="col-span-3 md:col-span-2">
-        <LanguagePicker
-          current={lang}
-          languages={[
-            { slug: "en", emoji: "🇺🇸" },
-            { slug: "pt-br", emoji: "🇧🇷" },
-          ]}
-        />
+        <LanguagePicker current={currentLang} />
       </div>
     </div>
   </Fragment>

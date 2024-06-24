@@ -1,11 +1,11 @@
 export const languages = {
-  en: "English",
-  "pt-br": "Portuguese",
+  en: { title: "English", emoji: "🇺🇸" },
+  "pt-br": { title: "Portuguese", emoji: "🇧🇷" },
 };
 
 export const defaultLang = "en";
 
-export const ui = {
+export const translations = {
   en: {
     "nav.title": "Laundry Symbols List",
     "nav.description":
@@ -41,3 +41,5 @@ export const ui = {
       "Símbolos de lavagem de países específicos ou padrões legados que não são mais produzidos",
   },
 } as const;
+
+export type Lang = keyof typeof languages | undefined;

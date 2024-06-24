@@ -1,7 +1,7 @@
 export interface Symbol {
   title: string;
   image: string;
-  category: string;
+  category: { id: string };
   info: {
     legacy: boolean;
   };

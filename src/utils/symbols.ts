@@ -1,44 +1,44 @@
 import { getCollection } from "astro:content";
 import type { Symbol, Category } from "~/types";
+import { defaultLang, type Lang } from "~/i18n/ui";
 
 const symbols = await getCollection("symbols");
 const categories = await getCollection("categories");
-interface CategoriesByAttribute {
+interface CategoryById {
   [key: string]: Category;
 }
-type Lang = "en" | "pt-br";
-interface SymbolObjectByAttribute {
+interface SymbolsByAttribute {
   [key: string]: Symbol[];
 }
 
-export const fetchCategories = (lang) =>
-  categories.reduce((symbolsObject: CategoriesByAttribute, category) => {
-    const categoryData = {
-      ...category.data,
-      title: category.data.title[lang], //Needs to vary based on language
-    };
-    if (!symbolsObject[category.id]) {
-      symbolsObject[category.id] = categoryData;
-    }
-    return symbolsObject;
-  }, {});
-
-const symbolsByCategory = (lang: Lang) =>
-  symbols.reduce((symbolsObject: SymbolObjectByAttribute, symbol) => {
+const symbolsByCategory = (lang: Lang = defaultLang) =>
+  symbols.reduce((symbolsObject: SymbolsByAttribute, symbol) => {
     const symbolData = {
       ...symbol.data,
       title: symbol.data.title[lang],
     };
-    if (symbolsObject[symbol.data.category]) {
-      symbolsObject[symbol.data.category].push(symbolData);
+    if (symbolsObject[symbol.data.category.id]) {
+      symbolsObject[symbol.data.category.id].push(symbolData);
     } else {
-      symbolsObject[symbol.data.category] = [symbolData];
+      symbolsObject[symbol.data.category.id] = [symbolData];
     }
     return symbolsObject;
   }, {});
 
-export const fetchSymbols = (lang = "en") => {
-  const orderedSymbols: SymbolObjectByAttribute = {};
+export const fetchCategories = (lang: Lang = defaultLang) =>
+  categories.reduce((categoryObject: CategoryById, category) => {
+    const categoryData = {
+      ...category.data,
+      title: category.data.title[lang],
+    };
+    if (!categoryObject[category.id]) {
+      categoryObject[category.id] = categoryData;
+    }
+    return categoryObject;
+  }, {});
+
+export const fetchSymbols = (lang: Lang = defaultLang) => {
+  const orderedSymbols: SymbolsByAttribute = {};
 
   const categoryOrder = [
     "washing",

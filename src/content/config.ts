@@ -1,21 +1,14 @@
-import { z, defineCollection } from "astro:content";
+import { z, defineCollection, reference } from "astro:content";
 
-const categoryKey = z.enum([
-  "washing",
-  "bleaching",
-  "drying",
-  "ironing",
-  "professional",
-  "wringing",
-]);
+const i18nLabel = z.record(
+  z.union([z.literal("en"), z.literal("pt-br")]),
+  z.string()
+);
 
 const categoryCollection = defineCollection({
   type: "data",
   schema: z.object({
-    title: z.object({
-      en: z.string(),
-      "pt-br": z.string().optional(),
-    }),
+    title: i18nLabel,
     image: z.string(),
   }),
 });
@@ -23,9 +16,9 @@ const categoryCollection = defineCollection({
 const symbolCollection = defineCollection({
   type: "data",
   schema: z.object({
-    title: z.record(z.union([z.literal("en"), z.literal("pt-br")]), z.string()),
+    title: i18nLabel,
     image: z.string(),
-    category: categoryKey,
+    category: reference("categories"),
     variation: z.string().optional(),
     info: z
       .object({

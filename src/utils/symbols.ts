@@ -15,7 +15,7 @@ const symbolsByCategory = (lang: Lang = defaultLang) =>
   symbols.reduce((symbolsObject: SymbolsByAttribute, symbol) => {
     const symbolData = {
       ...symbol.data,
-      title: symbol.data.title[lang],
+      title: symbol.data.title[lang]!,
     };
     if (symbolsObject[symbol.data.category.id]) {
       symbolsObject[symbol.data.category.id].push(symbolData);
@@ -29,7 +29,7 @@ export const fetchCategories = (lang: Lang = defaultLang) =>
   categories.reduce((categoryObject: CategoryById, category) => {
     const categoryData = {
       ...category.data,
-      title: category.data.title[lang],
+      title: category.data.title[lang]!,
     };
     if (!categoryObject[category.id]) {
       categoryObject[category.id] = categoryData;

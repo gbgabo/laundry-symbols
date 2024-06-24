@@ -6,6 +6,7 @@ export interface Props {
 
 const { current } = Astro.props;
 const currentLanguage = languages[current];
+const languageSlugs = Object.keys(languages) as Array<keyof typeof languages>;
 ---
 
 <div id="language-menu" class="h-full w-full relative inline-block text-left">
@@ -25,7 +26,7 @@ const currentLanguage = languages[current];
   </button>
   <div id="language-options" class="hidden absolute w-full">
     {
-      Object.keys(languages).map((language) => {
+      languageSlugs.map((language) => {
         return (
           language != current && (
             <div

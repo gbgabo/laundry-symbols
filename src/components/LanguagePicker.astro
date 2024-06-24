@@ -63,11 +63,11 @@ const currentLanguage = languages[current];
     "#language-options"
   ) as HTMLDivElement;
 
-  languageButton.addEventListener("click", (event) => {
+  languageButton.addEventListener("click", () => {
     languageOptions.classList.toggle("hidden");
   });
 
-  languageMenu.addEventListener("mouseleave", (event) => {
+  languageMenu.addEventListener("mouseleave", () => {
     languageOptions.classList.add("hidden");
   });
 </script>

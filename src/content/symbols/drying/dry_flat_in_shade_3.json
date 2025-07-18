@@ -1,0 +1,11 @@
+{
+  "title": {
+    "en": "Dry flat in shade",
+    "pt-br": "Secar na horizontal à sombra"
+  },
+  "image": "/img/symbols/drying/dry_flat_shade_3.svg",
+  "category": "drying",
+  "info": {
+    "legacy": true
+  }
+}

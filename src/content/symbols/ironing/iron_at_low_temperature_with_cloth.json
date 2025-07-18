@@ -1,0 +1,11 @@
+{
+  "title": {
+    "en": "Iron at low temperature, with a cloth",
+    "pt-br": "Passar a ferro em baixa temperatura, com um pano"
+  },
+  "image": "/img/symbols/ironing/iron_low_cloth.svg",
+  "category": "ironing",
+  "info": {
+    "legacy": true
+  }
+}

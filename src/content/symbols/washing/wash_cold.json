@@ -1,0 +1,8 @@
+{
+  "title": { "en": "Wash cold", "pt-br": "Lavar com água fria" },
+  "image": "/img/symbols/washing/wash_cold.svg",
+  "category": "washing",
+  "info": {
+    "legacy": true
+  }
+}

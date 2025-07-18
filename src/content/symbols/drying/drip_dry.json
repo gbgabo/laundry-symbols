@@ -1,0 +1,8 @@
+{
+  "title": { "en": "Drip dry", "pt-br": "Secar pingando" },
+  "image": "/img/symbols/drying/dry_drip.svg",
+  "category": "drying",
+  "info": {
+    "legacy": true
+  }
+}

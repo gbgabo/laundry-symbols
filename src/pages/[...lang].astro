@@ -2,72 +2,56 @@
 import Layout from "~/layouts/Layout.astro";
 import CategorySection from "~/components/CategorySection.astro";
 import SearchBar from "~/components/SearchBar.astro";
+import LanguagePicker from "~/components/LanguagePicker.astro";
 
-import { getCollection } from 'astro:content';
-
-interface Symbol {
-	title: string;
-	image: string;
-	category: string;
-}
-
-interface SymbolObjectByAttribute {
-	[key: string]: Symbol[];
-}
+import { languages, type Lang } from "~/i18n/ui";
+import { getLangFromUrl, useTranslations } from "~/i18n/utils";
+import { fetchSymbols, fetchCategories } from "~/utils/symbols";
 
 export async function getStaticPaths() {
-	const symbolsCollection = await getCollection('symbols');
-	return symbolsCollection.map(entry => ({
-		params: { lang: entry.id }, 
-		props: { entry },
-	}));
+  const paths: Lang[] = [
+    undefined,
+    ...(Object.keys(languages) as Array<keyof typeof languages>),
+  ];
+  return paths.map((lang) => {
+    return {
+      params: { lang },
+      props: {
+        symbols: fetchSymbols(lang),
+        categories: fetchCategories(lang),
+      },
+    };
+  });
 }
 
-const { lang } = Astro.params;
-const { entry } = Astro.props;
-const { title, description, symbols, categories, searchPrompt, footer } = entry.data;
+const currentLang = getLangFromUrl(Astro.url);
+const t = useTranslations(currentLang);
 
-const symbolsByCategory = symbols.reduce(
-	(symbolsObject: SymbolObjectByAttribute, symbol) => {
-		if (symbolsObject[symbol.category]) {
-			symbolsObject[symbol.category].push(symbol);
-		} else {
-			symbolsObject[symbol.category] = [symbol];
-		}
-		return symbolsObject;
-	},
-	{}
-);
-
-// const symbolsByCategory = Object.groupBy(symbols, ({ category }) => category);
+const { symbols, categories } = Astro.props;
 ---
 
-<Layout title={title} description={description} footer={footer}>
-	<SearchBar
-		current={lang}
-		prompt={searchPrompt}
-		languages={[
-			{
-				slug: "en",
-				emoji: "🇺🇸",
-			},
-			{
-				slug: "pt-br",
-				emoji: "🇧🇷",
-			},
-		]}
-	/>
-	<main class="m-auto mb-20 max-w-3xl bg-cyan-50 p-3">
-		{
-			Object.keys(symbolsByCategory).map((category) => {
-				return (
-					<CategorySection
-						symbols={symbolsByCategory[category]}
-						title={categories[category].name}
-						icon={categories[category].imageUrl}
-					/>
-				);
-			})
-		}
-	</main>
+<Layout title={t("nav.title")} description={t("nav.description")}>
+  <Fragment slot="top-bar">
+    <div class="grid grid-cols-12 gap-2">
+      <div class="col-span-9 md:col-span-10">
+        <SearchBar placeholder={t("nav.search")} />
+      </div>
+      <div class="col-span-3 md:col-span-2">
+        <LanguagePicker current={currentLang} />
+      </div>
+    </div>
+  </Fragment>
+  <main class="m-auto mb-20 max-w-3xl bg-cyan-50 p-3">
+    {
+      Object.keys(symbols).map((category) => {
+        return (
+          <CategorySection
+            symbols={symbols[category]}
+            category={{ ...categories[category] }}
+          />
+        );
+      })
+    }
+  </main>
+  <Fragment slot="footer" set:html={t("nav.footer")} />
 </Layout>

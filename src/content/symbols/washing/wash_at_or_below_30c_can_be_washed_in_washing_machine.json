@@ -1,0 +1,11 @@
+{
+  "title": {
+    "en": "Wash at or below 30°C, can be washed in washing machine",
+    "pt-br": "Lavar a 30°C ou menos, pode ser lavado na máquina de lavar"
+  },
+  "image": "/img/symbols/washing/wash_30_mild_machine.svg",
+  "category": "washing",
+  "info": {
+    "legacy": true
+  }
+}

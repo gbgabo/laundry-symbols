@@ -1,0 +1,74 @@
+---
+import { languages, translations } from "~/i18n/ui";
+export interface Props {
+  current: keyof typeof translations;
+}
+
+const { current } = Astro.props;
+const currentLanguage = languages[current];
+const languageSlugs = Object.keys(languages) as Array<keyof typeof languages>;
+---
+
+<div id="language-menu" class="h-full w-full relative inline-block text-left">
+  <button
+    type="button"
+    class="inline-flex h-full w-full justify-center rounded-full bg-white p-3 text-sm font-medium text-gray-700 shadow-md outline-none hover:bg-gray-50 focus:outline-none"
+    id="language-button"
+    aria-expanded="true"
+    aria-haspopup="true"
+  >
+    {currentLanguage.emoji}
+    <img
+      class="-mr-1 ml-2 h-5 w-5"
+      src="/img/icons/arrow_down.svg"
+      alt="expand menu"
+    />
+  </button>
+  <div id="language-options" class="hidden absolute w-full">
+    {
+      languageSlugs.map((language) => {
+        return (
+          language != current && (
+            <div
+              class="mt-2 flex justify-center rounded-full bg-white p-3 text-sm font-medium text-gray-700 shadow-md outline-none hover:bg-gray-50 focus:outline-none"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="menu-button"
+              tabindex="-1"
+            >
+              <a
+                href={language}
+                class="block px-4 text-sm text-gray-700"
+                role="menuitem"
+                tabindex="-1"
+                id="menu-item-0"
+              >
+                {languages[language].emoji}
+              </a>
+            </div>
+          )
+        );
+      })
+    }
+  </div>
+</div>
+
+<script>
+  const languageMenu = document.querySelector(
+    "#language-menu"
+  ) as HTMLDivElement;
+  const languageButton = document.querySelector(
+    "#language-button"
+  ) as HTMLButtonElement;
+  const languageOptions = document.querySelector(
+    "#language-options"
+  ) as HTMLDivElement;
+
+  languageButton.addEventListener("click", () => {
+    languageOptions.classList.toggle("hidden");
+  });
+
+  languageMenu.addEventListener("mouseleave", () => {
+    languageOptions.classList.add("hidden");
+  });
+</script>

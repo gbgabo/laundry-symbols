@@ -1,0 +1,11 @@
+{
+  "title": {
+    "en": "Line dry in the shade",
+    "pt-br": "Secar em varal à sombra"
+  },
+  "image": "/img/symbols/drying/dry_line_shade_2.svg",
+  "category": "drying",
+  "info": {
+    "legacy": true
+  }
+}

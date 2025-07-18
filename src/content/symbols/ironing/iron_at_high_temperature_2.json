@@ -1,0 +1,11 @@
+{
+  "title": {
+    "en": "Iron at high temperature",
+    "pt-br": "Passar a ferro em alta temperatura"
+  },
+  "image": "/img/symbols/ironing/iron_high_2.svg",
+  "category": "ironing",
+  "info": {
+    "legacy": true
+  }
+}

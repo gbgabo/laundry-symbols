@@ -1,0 +1,11 @@
+{
+  "title": {
+    "en": "Dry clean, tetrachloroethylene (PCE) only",
+    "pt-br": "Lavar a seco, apenas tetracloroetileno (PCE)"
+  },
+  "image": "/img/symbols/professional/pro_pce_2.svg",
+  "category": "professional",
+  "info": {
+    "legacy": true
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "title": { "en": "Dry in the shade", "pt-br": "Secar na sombra" },
+  "image": "/img/symbols/drying/dry_shade.svg",
+  "category": "drying",
+  "info": {
+    "legacy": true
+  }
+}

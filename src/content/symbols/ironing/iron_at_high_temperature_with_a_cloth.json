@@ -1,0 +1,11 @@
+{
+  "title": {
+    "en": "Iron at high temperature, with a cloth",
+    "pt-br": "Passar a ferro em alta temperatura, com um pano"
+  },
+  "image": "/img/symbols/ironing/iron_high_cloth.svg",
+  "category": "ironing",
+  "info": {
+    "legacy": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "title": {
+    "en": "If wring, do it gently",
+    "pt-br": "Se torcer, faça-o delicadamente"
+  },
+  "image": "/img/symbols/wringing/wring_gently.svg",
+  "category": "wringing",
+  "info": {
+    "legacy": true
+  }
+}

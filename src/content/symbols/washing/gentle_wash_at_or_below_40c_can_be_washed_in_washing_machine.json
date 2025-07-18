@@ -1,0 +1,11 @@
+{
+  "title": {
+    "en": "Gentle wash at or below 40°C, can be washed in washing machine",
+    "pt-br": "Lavagem delicada a 40°C ou menos, pode ser lavada na máquina de lavar"
+  },
+  "image": "/img/symbols/washing/wash_40_mild_machine.svg",
+  "category": "washing",
+  "info": {
+    "legacy": true
+  }
+}

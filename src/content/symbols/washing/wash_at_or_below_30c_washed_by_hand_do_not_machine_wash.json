@@ -1,0 +1,11 @@
+{
+  "title": {
+    "en": "Wash at or below 30°C, washed by hand, do not machine wash",
+    "pt-br": "Lavar a 30°C ou menos, lavar à mão, não lavar na máquina"
+  },
+  "image": "/img/symbols/washing/wash_30_hand.svg",
+  "category": "washing",
+  "info": {
+    "legacy": true
+  }
+}

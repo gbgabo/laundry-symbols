@@ -1,0 +1,11 @@
+{
+  "title": {
+    "en": "Gentle wash at or below 40°C, machine wash inside a net",
+    "pt-br": "Lavagem delicada a 40°C ou menos, lavagem na máquina dentro de uma rede"
+  },
+  "image": "/img/symbols/washing/wash_40_mild_machine_net.svg",
+  "category": "washing",
+  "info": {
+    "legacy": true
+  }
+}
